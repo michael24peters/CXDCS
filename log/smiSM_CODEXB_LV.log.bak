@@ -1,0 +1,10 @@
+
+ SMI++ State Manager Version - v67r2- Date : 25-September-2024:14:09
+
+Options:
+ -d 1 -u 1 -t 1 -dns cxdcs01 -loopMaxChanges 25 -loopMaxChangesFatal 5000 -loopMinDuration -1
+
+    SMI Domain : CODEXB_LV
+    Input File : /opt/winccoa_projects/CXDCS/smi/CODEXB_LV.sobj
+
+2026.01.24 17:53:57.175 - SMI++ Initiator started

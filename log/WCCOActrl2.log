@@ -17,3 +17,73 @@
 2026.01.23 16:36:21.497[""]
 2026.01.23 16:38:09.269["CXDCS:DistributedControl: DistributedControl initialisation successfully done"]
 2026.01.23 16:38:09.269["CXDCS:DistributedControl: unDistributedControl version 9.1.0 loaded"]
+2026.01.24 16:38:49.094[""]
+2026.01.24 16:38:49.094["**************** fwCaen .postinstall (start) ****************"]
+2026.01.24 16:38:49.094[""]
+2026.01.24 16:38:49.094[""]
+2026.01.24 16:38:49.094["**************** fwCaen .postinstall (finish) ****************"]
+2026.01.24 16:38:49.094[""]
+2026.01.24 16:51:35.059[""]
+2026.01.24 16:51:35.059["**************** fwCaen .postinstall (start) ****************"]
+2026.01.24 16:51:35.059[""]
+2026.01.24 16:51:35.059[""]
+2026.01.24 16:51:35.059["**************** fwCaen .postinstall (finish) ****************"]
+2026.01.24 16:51:35.059[""]
+2026.01.24 16:52:33.699["CXDCS:DistributedControl: DistributedControl initialisation successfully done"]
+2026.01.24 16:52:33.699["CXDCS:DistributedControl: unDistributedControl version 9.1.0 loaded"]
+2026.01.24 17:47:30.378[""]
+2026.01.24 17:47:30.378["**************** fwTrending .postinstall (start) ****************"]
+2026.01.24 17:47:30.378[""]
+2026.01.24 17:47:30.378["fwTrending: configuring default panels"]
+2026.01.24 17:47:30.378["fwTrending: adding clipboard to trend tree"]
+2026.01.24 17:47:30.379["fwTrending: updating device references"]
+2026.01.24 17:47:30.379["fwTrending.postInstall() -> FWTREND-1067 -> Fix not required"]
+2026.01.24 17:47:30.381[""]
+2026.01.24 17:47:30.381["**************** fwTrending .postinstall (finish) ****************"]
+2026.01.24 17:47:30.381[""]
+2026.01.24 17:47:30.466[""]
+2026.01.24 17:47:30.466["**************** fwCaen .postinstall (start) ****************"]
+2026.01.24 17:47:30.466[""]
+2026.01.24 17:47:30.466[""]
+2026.01.24 17:47:30.466["**************** fwCaen .postinstall (finish) ****************"]
+2026.01.24 17:47:30.466[""]
+2026.01.26 14:31:40.698["CXDCS:DistributedControl: DistributedControl initialisation successfully done"]
+2026.01.26 14:31:40.698["CXDCS:DistributedControl: unDistributedControl version 9.3.0 loaded"]
+2026.01.26 14:53:23.341["CXDCS:DistributedControl: DistributedControl initialisation successfully done"]
+2026.01.26 14:53:23.341["CXDCS:DistributedControl: unDistributedControl version 9.3.0 loaded"]
+2026.01.26 17:09:45.564["CXDCS:DistributedControl: DistributedControl initialisation successfully done"]
+2026.01.26 17:09:45.564["CXDCS:DistributedControl: unDistributedControl version 9.3.0 loaded"]
+2026.01.26 17:11:02.887["CXDCS:DistributedControl: Detected new connection to system CXECS. Creating internal datapoint as this is not a UNICOS project."]
+2026.01.26 17:11:02.889["LB Getting"][dyn_int 1 items
+     1: 1415
+][dyn_string 1 items
+     1: "cxecs01"
+]
+2026.01.26 17:11:02.890["lbDistributedControl_getSysPort"]["CXECS"][dyn_string 0 items
+]["cxecs01"][151500][0]
+2026.01.26 17:11:02.902["lbDistributedControl_getSysPort"]["CXECS"][dyn_string 0 items
+]["cxecs01"][14150][16]
+2026.01.28 05:47:22.379["CXDCS:DistributedControl: Detected new connection to system CXECS. Creating internal datapoint as this is not a UNICOS project."]
+2026.01.28 05:47:22.379["LB Getting"][dyn_int 1 items
+     1: 1415
+][dyn_string 1 items
+     1: "cxecs01"
+]
+2026.01.28 05:47:22.380["lbDistributedControl_getSysPort"]["CXECS"][dyn_string 0 items
+]["cxecs01"][151500][0]
+2026.01.28 05:47:22.392["lbDistributedControl_getSysPort"]["CXECS"][dyn_string 0 items
+]["cxecs01"][14150][16]
+2026.01.28 05:47:22.395["CXDCS:DistributedControl: DistributedControl initialisation successfully done"]
+2026.01.28 05:47:22.395["CXDCS:DistributedControl: unDistributedControl version 9.3.0 loaded"]
+2026.01.28 05:48:55.627["CXDCS:DistributedControl: DistributedControl initialisation successfully done"]
+2026.01.28 05:48:55.627["CXDCS:DistributedControl: unDistributedControl version 9.3.0 loaded"]
+2026.01.28 05:49:01.829["CXDCS:DistributedControl: Detected new connection to system CXECS. Creating internal datapoint as this is not a UNICOS project."]
+2026.01.28 05:49:01.829["LB Getting"][dyn_int 1 items
+     1: 1415
+][dyn_string 1 items
+     1: "cxecs01"
+]
+2026.01.28 05:49:01.830["lbDistributedControl_getSysPort"]["CXECS"][dyn_string 0 items
+]["cxecs01"][151500][0]
+2026.01.28 05:49:01.842["lbDistributedControl_getSysPort"]["CXECS"][dyn_string 0 items
+]["cxecs01"][14150][16]

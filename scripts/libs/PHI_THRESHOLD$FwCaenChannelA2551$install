@@ -1,0 +1,428 @@
+#uses "FwCaenChannelA2551.ctl"
+PHI_THRESHOLD_CAEN_cxcaen01_board10_channel001_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board10/channel001");
+   if(!globalExists("FwCaenChannelA2551_CurrDUActions"))
+   {
+      addGlobal("FwCaenChannelA2551_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwCaenChannelA2551",FwCaenChannelA2551_CurrDUActions);
+   }
+   FwCaenChannelA2551_initialize("PHI_THRESHOLD", devdp);
+   fwDU_setDefaultParameters("PHI_THRESHOLD", devdp);
+   if(dpConnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board10_channel001_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board10_channel001_doCommand",false,
+     "PHI_THRESHOLD|CAEN/cxcaen01/board10/channel001.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+PHI_THRESHOLD_CAEN_cxcaen01_board10_channel001_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling PHI_THRESHOLD CAEN/cxcaen01/board10/channel001");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board10/channel001");
+   if(dpDisconnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board10_channel001_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board10_channel001_doCommand",
+     "PHI_THRESHOLD|CAEN/cxcaen01/board10/channel001.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbPHI_THRESHOLD_CAEN_cxcaen01_board10_channel001_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board10/channel001");
+   fwDU_convertValue("PHI_THRESHOLD","CAEN/cxcaen01/board10/channel001");
+   FwCaenChannelA2551_valueChanged("PHI_THRESHOLD", devdp,
+      x1, state );
+   fwDU_setState("PHI_THRESHOLD", devdp, state);
+}
+
+cbPHI_THRESHOLD_CAEN_cxcaen01_board10_channel001_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board10/channel001");
+   command = fwDU_convertCommand("PHI_THRESHOLD","CAEN/cxcaen01/board10/channel001","FwCaenChannelA2551", FwCaenChannelA2551_CurrDUActions, command);
+   FwCaenChannelA2551_doCommand("PHI_THRESHOLD", devdp, command);
+}
+
+PHI_THRESHOLD_CAEN_cxcaen01_board10_channel005_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board10/channel005");
+   if(!globalExists("FwCaenChannelA2551_CurrDUActions"))
+   {
+      addGlobal("FwCaenChannelA2551_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwCaenChannelA2551",FwCaenChannelA2551_CurrDUActions);
+   }
+   FwCaenChannelA2551_initialize("PHI_THRESHOLD", devdp);
+   fwDU_setDefaultParameters("PHI_THRESHOLD", devdp);
+   if(dpConnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board10_channel005_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board10_channel005_doCommand",false,
+     "PHI_THRESHOLD|CAEN/cxcaen01/board10/channel005.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+PHI_THRESHOLD_CAEN_cxcaen01_board10_channel005_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling PHI_THRESHOLD CAEN/cxcaen01/board10/channel005");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board10/channel005");
+   if(dpDisconnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board10_channel005_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board10_channel005_doCommand",
+     "PHI_THRESHOLD|CAEN/cxcaen01/board10/channel005.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbPHI_THRESHOLD_CAEN_cxcaen01_board10_channel005_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board10/channel005");
+   fwDU_convertValue("PHI_THRESHOLD","CAEN/cxcaen01/board10/channel005");
+   FwCaenChannelA2551_valueChanged("PHI_THRESHOLD", devdp,
+      x1, state );
+   fwDU_setState("PHI_THRESHOLD", devdp, state);
+}
+
+cbPHI_THRESHOLD_CAEN_cxcaen01_board10_channel005_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board10/channel005");
+   command = fwDU_convertCommand("PHI_THRESHOLD","CAEN/cxcaen01/board10/channel005","FwCaenChannelA2551", FwCaenChannelA2551_CurrDUActions, command);
+   FwCaenChannelA2551_doCommand("PHI_THRESHOLD", devdp, command);
+}
+
+PHI_THRESHOLD_CAEN_cxcaen01_board11_channel001_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board11/channel001");
+   if(!globalExists("FwCaenChannelA2551_CurrDUActions"))
+   {
+      addGlobal("FwCaenChannelA2551_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwCaenChannelA2551",FwCaenChannelA2551_CurrDUActions);
+   }
+   FwCaenChannelA2551_initialize("PHI_THRESHOLD", devdp);
+   fwDU_setDefaultParameters("PHI_THRESHOLD", devdp);
+   if(dpConnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board11_channel001_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board11_channel001_doCommand",false,
+     "PHI_THRESHOLD|CAEN/cxcaen01/board11/channel001.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+PHI_THRESHOLD_CAEN_cxcaen01_board11_channel001_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling PHI_THRESHOLD CAEN/cxcaen01/board11/channel001");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board11/channel001");
+   if(dpDisconnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board11_channel001_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board11_channel001_doCommand",
+     "PHI_THRESHOLD|CAEN/cxcaen01/board11/channel001.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbPHI_THRESHOLD_CAEN_cxcaen01_board11_channel001_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board11/channel001");
+   fwDU_convertValue("PHI_THRESHOLD","CAEN/cxcaen01/board11/channel001");
+   FwCaenChannelA2551_valueChanged("PHI_THRESHOLD", devdp,
+      x1, state );
+   fwDU_setState("PHI_THRESHOLD", devdp, state);
+}
+
+cbPHI_THRESHOLD_CAEN_cxcaen01_board11_channel001_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board11/channel001");
+   command = fwDU_convertCommand("PHI_THRESHOLD","CAEN/cxcaen01/board11/channel001","FwCaenChannelA2551", FwCaenChannelA2551_CurrDUActions, command);
+   FwCaenChannelA2551_doCommand("PHI_THRESHOLD", devdp, command);
+}
+
+PHI_THRESHOLD_CAEN_cxcaen01_board11_channel005_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board11/channel005");
+   if(!globalExists("FwCaenChannelA2551_CurrDUActions"))
+   {
+      addGlobal("FwCaenChannelA2551_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwCaenChannelA2551",FwCaenChannelA2551_CurrDUActions);
+   }
+   FwCaenChannelA2551_initialize("PHI_THRESHOLD", devdp);
+   fwDU_setDefaultParameters("PHI_THRESHOLD", devdp);
+   if(dpConnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board11_channel005_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board11_channel005_doCommand",false,
+     "PHI_THRESHOLD|CAEN/cxcaen01/board11/channel005.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+PHI_THRESHOLD_CAEN_cxcaen01_board11_channel005_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling PHI_THRESHOLD CAEN/cxcaen01/board11/channel005");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board11/channel005");
+   if(dpDisconnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board11_channel005_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board11_channel005_doCommand",
+     "PHI_THRESHOLD|CAEN/cxcaen01/board11/channel005.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbPHI_THRESHOLD_CAEN_cxcaen01_board11_channel005_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board11/channel005");
+   fwDU_convertValue("PHI_THRESHOLD","CAEN/cxcaen01/board11/channel005");
+   FwCaenChannelA2551_valueChanged("PHI_THRESHOLD", devdp,
+      x1, state );
+   fwDU_setState("PHI_THRESHOLD", devdp, state);
+}
+
+cbPHI_THRESHOLD_CAEN_cxcaen01_board11_channel005_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board11/channel005");
+   command = fwDU_convertCommand("PHI_THRESHOLD","CAEN/cxcaen01/board11/channel005","FwCaenChannelA2551", FwCaenChannelA2551_CurrDUActions, command);
+   FwCaenChannelA2551_doCommand("PHI_THRESHOLD", devdp, command);
+}
+
+PHI_THRESHOLD_CAEN_cxcaen01_board12_channel001_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board12/channel001");
+   if(!globalExists("FwCaenChannelA2551_CurrDUActions"))
+   {
+      addGlobal("FwCaenChannelA2551_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwCaenChannelA2551",FwCaenChannelA2551_CurrDUActions);
+   }
+   FwCaenChannelA2551_initialize("PHI_THRESHOLD", devdp);
+   fwDU_setDefaultParameters("PHI_THRESHOLD", devdp);
+   if(dpConnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board12_channel001_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board12_channel001_doCommand",false,
+     "PHI_THRESHOLD|CAEN/cxcaen01/board12/channel001.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+PHI_THRESHOLD_CAEN_cxcaen01_board12_channel001_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling PHI_THRESHOLD CAEN/cxcaen01/board12/channel001");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board12/channel001");
+   if(dpDisconnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board12_channel001_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board12_channel001_doCommand",
+     "PHI_THRESHOLD|CAEN/cxcaen01/board12/channel001.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbPHI_THRESHOLD_CAEN_cxcaen01_board12_channel001_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board12/channel001");
+   fwDU_convertValue("PHI_THRESHOLD","CAEN/cxcaen01/board12/channel001");
+   FwCaenChannelA2551_valueChanged("PHI_THRESHOLD", devdp,
+      x1, state );
+   fwDU_setState("PHI_THRESHOLD", devdp, state);
+}
+
+cbPHI_THRESHOLD_CAEN_cxcaen01_board12_channel001_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board12/channel001");
+   command = fwDU_convertCommand("PHI_THRESHOLD","CAEN/cxcaen01/board12/channel001","FwCaenChannelA2551", FwCaenChannelA2551_CurrDUActions, command);
+   FwCaenChannelA2551_doCommand("PHI_THRESHOLD", devdp, command);
+}
+
+PHI_THRESHOLD_CAEN_cxcaen01_board12_channel005_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board12/channel005");
+   if(!globalExists("FwCaenChannelA2551_CurrDUActions"))
+   {
+      addGlobal("FwCaenChannelA2551_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwCaenChannelA2551",FwCaenChannelA2551_CurrDUActions);
+   }
+   FwCaenChannelA2551_initialize("PHI_THRESHOLD", devdp);
+   fwDU_setDefaultParameters("PHI_THRESHOLD", devdp);
+   if(dpConnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board12_channel005_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board12_channel005_doCommand",false,
+     "PHI_THRESHOLD|CAEN/cxcaen01/board12/channel005.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+PHI_THRESHOLD_CAEN_cxcaen01_board12_channel005_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling PHI_THRESHOLD CAEN/cxcaen01/board12/channel005");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board12/channel005");
+   if(dpDisconnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board12_channel005_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board12_channel005_doCommand",
+     "PHI_THRESHOLD|CAEN/cxcaen01/board12/channel005.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbPHI_THRESHOLD_CAEN_cxcaen01_board12_channel005_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board12/channel005");
+   fwDU_convertValue("PHI_THRESHOLD","CAEN/cxcaen01/board12/channel005");
+   FwCaenChannelA2551_valueChanged("PHI_THRESHOLD", devdp,
+      x1, state );
+   fwDU_setState("PHI_THRESHOLD", devdp, state);
+}
+
+cbPHI_THRESHOLD_CAEN_cxcaen01_board12_channel005_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board12/channel005");
+   command = fwDU_convertCommand("PHI_THRESHOLD","CAEN/cxcaen01/board12/channel005","FwCaenChannelA2551", FwCaenChannelA2551_CurrDUActions, command);
+   FwCaenChannelA2551_doCommand("PHI_THRESHOLD", devdp, command);
+}
+
+PHI_THRESHOLD_CAEN_cxcaen01_board13_channel001_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel001");
+   if(!globalExists("FwCaenChannelA2551_CurrDUActions"))
+   {
+      addGlobal("FwCaenChannelA2551_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwCaenChannelA2551",FwCaenChannelA2551_CurrDUActions);
+   }
+   FwCaenChannelA2551_initialize("PHI_THRESHOLD", devdp);
+   fwDU_setDefaultParameters("PHI_THRESHOLD", devdp);
+   if(dpConnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board13_channel001_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board13_channel001_doCommand",false,
+     "PHI_THRESHOLD|CAEN/cxcaen01/board13/channel001.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+PHI_THRESHOLD_CAEN_cxcaen01_board13_channel001_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling PHI_THRESHOLD CAEN/cxcaen01/board13/channel001");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel001");
+   if(dpDisconnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board13_channel001_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbPHI_THRESHOLD_CAEN_cxcaen01_board13_channel001_doCommand",
+     "PHI_THRESHOLD|CAEN/cxcaen01/board13/channel001.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbPHI_THRESHOLD_CAEN_cxcaen01_board13_channel001_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel001");
+   fwDU_convertValue("PHI_THRESHOLD","CAEN/cxcaen01/board13/channel001");
+   FwCaenChannelA2551_valueChanged("PHI_THRESHOLD", devdp,
+      x1, state );
+   fwDU_setState("PHI_THRESHOLD", devdp, state);
+}
+
+cbPHI_THRESHOLD_CAEN_cxcaen01_board13_channel001_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel001");
+   command = fwDU_convertCommand("PHI_THRESHOLD","CAEN/cxcaen01/board13/channel001","FwCaenChannelA2551", FwCaenChannelA2551_CurrDUActions, command);
+   FwCaenChannelA2551_doCommand("PHI_THRESHOLD", devdp, command);
+}
+

@@ -1,0 +1,367 @@
+#uses "FwCaenChannelA2551.ctl"
+VSENSE_CAEN_cxcaen01_board13_channel004_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel004");
+   if(!globalExists("FwCaenChannelA2551_CurrDUActions"))
+   {
+      addGlobal("FwCaenChannelA2551_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwCaenChannelA2551",FwCaenChannelA2551_CurrDUActions);
+   }
+   FwCaenChannelA2551_initialize("VSENSE", devdp);
+   fwDU_setDefaultParameters("VSENSE", devdp);
+   if(dpConnect("cbVSENSE_CAEN_cxcaen01_board13_channel004_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbVSENSE_CAEN_cxcaen01_board13_channel004_doCommand",false,
+     "VSENSE|CAEN/cxcaen01/board13/channel004.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+VSENSE_CAEN_cxcaen01_board13_channel004_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling VSENSE CAEN/cxcaen01/board13/channel004");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel004");
+   if(dpDisconnect("cbVSENSE_CAEN_cxcaen01_board13_channel004_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbVSENSE_CAEN_cxcaen01_board13_channel004_doCommand",
+     "VSENSE|CAEN/cxcaen01/board13/channel004.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbVSENSE_CAEN_cxcaen01_board13_channel004_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel004");
+   fwDU_convertValue("VSENSE","CAEN/cxcaen01/board13/channel004");
+   FwCaenChannelA2551_valueChanged("VSENSE", devdp,
+      x1, state );
+   fwDU_setState("VSENSE", devdp, state);
+}
+
+cbVSENSE_CAEN_cxcaen01_board13_channel004_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel004");
+   command = fwDU_convertCommand("VSENSE","CAEN/cxcaen01/board13/channel004","FwCaenChannelA2551", FwCaenChannelA2551_CurrDUActions, command);
+   FwCaenChannelA2551_doCommand("VSENSE", devdp, command);
+}
+
+VSENSE_CAEN_cxcaen01_board13_channel005_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel005");
+   if(!globalExists("FwCaenChannelA2551_CurrDUActions"))
+   {
+      addGlobal("FwCaenChannelA2551_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwCaenChannelA2551",FwCaenChannelA2551_CurrDUActions);
+   }
+   FwCaenChannelA2551_initialize("VSENSE", devdp);
+   fwDU_setDefaultParameters("VSENSE", devdp);
+   if(dpConnect("cbVSENSE_CAEN_cxcaen01_board13_channel005_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbVSENSE_CAEN_cxcaen01_board13_channel005_doCommand",false,
+     "VSENSE|CAEN/cxcaen01/board13/channel005.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+VSENSE_CAEN_cxcaen01_board13_channel005_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling VSENSE CAEN/cxcaen01/board13/channel005");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel005");
+   if(dpDisconnect("cbVSENSE_CAEN_cxcaen01_board13_channel005_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbVSENSE_CAEN_cxcaen01_board13_channel005_doCommand",
+     "VSENSE|CAEN/cxcaen01/board13/channel005.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbVSENSE_CAEN_cxcaen01_board13_channel005_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel005");
+   fwDU_convertValue("VSENSE","CAEN/cxcaen01/board13/channel005");
+   FwCaenChannelA2551_valueChanged("VSENSE", devdp,
+      x1, state );
+   fwDU_setState("VSENSE", devdp, state);
+}
+
+cbVSENSE_CAEN_cxcaen01_board13_channel005_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel005");
+   command = fwDU_convertCommand("VSENSE","CAEN/cxcaen01/board13/channel005","FwCaenChannelA2551", FwCaenChannelA2551_CurrDUActions, command);
+   FwCaenChannelA2551_doCommand("VSENSE", devdp, command);
+}
+
+VSENSE_CAEN_cxcaen01_board13_channel006_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel006");
+   if(!globalExists("FwCaenChannelA2551_CurrDUActions"))
+   {
+      addGlobal("FwCaenChannelA2551_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwCaenChannelA2551",FwCaenChannelA2551_CurrDUActions);
+   }
+   FwCaenChannelA2551_initialize("VSENSE", devdp);
+   fwDU_setDefaultParameters("VSENSE", devdp);
+   if(dpConnect("cbVSENSE_CAEN_cxcaen01_board13_channel006_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbVSENSE_CAEN_cxcaen01_board13_channel006_doCommand",false,
+     "VSENSE|CAEN/cxcaen01/board13/channel006.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+VSENSE_CAEN_cxcaen01_board13_channel006_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling VSENSE CAEN/cxcaen01/board13/channel006");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel006");
+   if(dpDisconnect("cbVSENSE_CAEN_cxcaen01_board13_channel006_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbVSENSE_CAEN_cxcaen01_board13_channel006_doCommand",
+     "VSENSE|CAEN/cxcaen01/board13/channel006.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbVSENSE_CAEN_cxcaen01_board13_channel006_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel006");
+   fwDU_convertValue("VSENSE","CAEN/cxcaen01/board13/channel006");
+   FwCaenChannelA2551_valueChanged("VSENSE", devdp,
+      x1, state );
+   fwDU_setState("VSENSE", devdp, state);
+}
+
+cbVSENSE_CAEN_cxcaen01_board13_channel006_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel006");
+   command = fwDU_convertCommand("VSENSE","CAEN/cxcaen01/board13/channel006","FwCaenChannelA2551", FwCaenChannelA2551_CurrDUActions, command);
+   FwCaenChannelA2551_doCommand("VSENSE", devdp, command);
+}
+
+VSENSE_CAEN_cxcaen01_board13_channel007_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel007");
+   if(!globalExists("FwCaenChannelA2551_CurrDUActions"))
+   {
+      addGlobal("FwCaenChannelA2551_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwCaenChannelA2551",FwCaenChannelA2551_CurrDUActions);
+   }
+   FwCaenChannelA2551_initialize("VSENSE", devdp);
+   fwDU_setDefaultParameters("VSENSE", devdp);
+   if(dpConnect("cbVSENSE_CAEN_cxcaen01_board13_channel007_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbVSENSE_CAEN_cxcaen01_board13_channel007_doCommand",false,
+     "VSENSE|CAEN/cxcaen01/board13/channel007.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+VSENSE_CAEN_cxcaen01_board13_channel007_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling VSENSE CAEN/cxcaen01/board13/channel007");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel007");
+   if(dpDisconnect("cbVSENSE_CAEN_cxcaen01_board13_channel007_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbVSENSE_CAEN_cxcaen01_board13_channel007_doCommand",
+     "VSENSE|CAEN/cxcaen01/board13/channel007.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbVSENSE_CAEN_cxcaen01_board13_channel007_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel007");
+   fwDU_convertValue("VSENSE","CAEN/cxcaen01/board13/channel007");
+   FwCaenChannelA2551_valueChanged("VSENSE", devdp,
+      x1, state );
+   fwDU_setState("VSENSE", devdp, state);
+}
+
+cbVSENSE_CAEN_cxcaen01_board13_channel007_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board13/channel007");
+   command = fwDU_convertCommand("VSENSE","CAEN/cxcaen01/board13/channel007","FwCaenChannelA2551", FwCaenChannelA2551_CurrDUActions, command);
+   FwCaenChannelA2551_doCommand("VSENSE", devdp, command);
+}
+
+VSENSE_CAEN_cxcaen01_board14_channel000_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board14/channel000");
+   if(!globalExists("FwCaenChannelA2551_CurrDUActions"))
+   {
+      addGlobal("FwCaenChannelA2551_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwCaenChannelA2551",FwCaenChannelA2551_CurrDUActions);
+   }
+   FwCaenChannelA2551_initialize("VSENSE", devdp);
+   fwDU_setDefaultParameters("VSENSE", devdp);
+   if(dpConnect("cbVSENSE_CAEN_cxcaen01_board14_channel000_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbVSENSE_CAEN_cxcaen01_board14_channel000_doCommand",false,
+     "VSENSE|CAEN/cxcaen01/board14/channel000.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+VSENSE_CAEN_cxcaen01_board14_channel000_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling VSENSE CAEN/cxcaen01/board14/channel000");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board14/channel000");
+   if(dpDisconnect("cbVSENSE_CAEN_cxcaen01_board14_channel000_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbVSENSE_CAEN_cxcaen01_board14_channel000_doCommand",
+     "VSENSE|CAEN/cxcaen01/board14/channel000.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbVSENSE_CAEN_cxcaen01_board14_channel000_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board14/channel000");
+   fwDU_convertValue("VSENSE","CAEN/cxcaen01/board14/channel000");
+   FwCaenChannelA2551_valueChanged("VSENSE", devdp,
+      x1, state );
+   fwDU_setState("VSENSE", devdp, state);
+}
+
+cbVSENSE_CAEN_cxcaen01_board14_channel000_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board14/channel000");
+   command = fwDU_convertCommand("VSENSE","CAEN/cxcaen01/board14/channel000","FwCaenChannelA2551", FwCaenChannelA2551_CurrDUActions, command);
+   FwCaenChannelA2551_doCommand("VSENSE", devdp, command);
+}
+
+VSENSE_CAEN_cxcaen01_board14_channel001_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board14/channel001");
+   if(!globalExists("FwCaenChannelA2551_CurrDUActions"))
+   {
+      addGlobal("FwCaenChannelA2551_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwCaenChannelA2551",FwCaenChannelA2551_CurrDUActions);
+   }
+   FwCaenChannelA2551_initialize("VSENSE", devdp);
+   fwDU_setDefaultParameters("VSENSE", devdp);
+   if(dpConnect("cbVSENSE_CAEN_cxcaen01_board14_channel001_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbVSENSE_CAEN_cxcaen01_board14_channel001_doCommand",false,
+     "VSENSE|CAEN/cxcaen01/board14/channel001.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+VSENSE_CAEN_cxcaen01_board14_channel001_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling VSENSE CAEN/cxcaen01/board14/channel001");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board14/channel001");
+   if(dpDisconnect("cbVSENSE_CAEN_cxcaen01_board14_channel001_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbVSENSE_CAEN_cxcaen01_board14_channel001_doCommand",
+     "VSENSE|CAEN/cxcaen01/board14/channel001.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbVSENSE_CAEN_cxcaen01_board14_channel001_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board14/channel001");
+   fwDU_convertValue("VSENSE","CAEN/cxcaen01/board14/channel001");
+   FwCaenChannelA2551_valueChanged("VSENSE", devdp,
+      x1, state );
+   fwDU_setState("VSENSE", devdp, state);
+}
+
+cbVSENSE_CAEN_cxcaen01_board14_channel001_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board14/channel001");
+   command = fwDU_convertCommand("VSENSE","CAEN/cxcaen01/board14/channel001","FwCaenChannelA2551", FwCaenChannelA2551_CurrDUActions, command);
+   FwCaenChannelA2551_doCommand("VSENSE", devdp, command);
+}
+

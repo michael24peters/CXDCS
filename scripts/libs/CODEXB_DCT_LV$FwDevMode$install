@@ -1,0 +1,45 @@
+#uses "FwDevMode.ctl"
+CODEXB_DCT_LV_CODEXB_DCT_LV_FWDM_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CODEXB_DCT_LV_FWDM");
+   if(!globalExists("FwDevMode_CurrDUActions"))
+   {
+      addGlobal("FwDevMode_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwDevMode",FwDevMode_CurrDUActions);
+   }
+   FwDevMode_initialize("CODEXB_DCT_LV", devdp);
+   fwDU_setDefaultParameters("CODEXB_DCT_LV", devdp);
+   if(dpConnect("cbCODEXB_DCT_LV_CODEXB_DCT_LV_FWDM_valueChanged",
+      devdp+".disabled:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+}
+
+CODEXB_DCT_LV_CODEXB_DCT_LV_FWDM_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling CODEXB_DCT_LV CODEXB_DCT_LV_FWDM");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CODEXB_DCT_LV_FWDM");
+   if(dpDisconnect("cbCODEXB_DCT_LV_CODEXB_DCT_LV_FWDM_valueChanged",
+      devdp+".disabled:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+}
+
+cbCODEXB_DCT_LV_CODEXB_DCT_LV_FWDM_valueChanged(
+      string dp1, dyn_string x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CODEXB_DCT_LV_FWDM");
+   fwDU_convertValue("CODEXB_DCT_LV","CODEXB_DCT_LV_FWDM");
+   FwDevMode_valueChanged("CODEXB_DCT_LV", devdp,
+      x1, state );
+   fwDU_setState("CODEXB_DCT_LV", devdp, state);
+}
+

@@ -1,0 +1,955 @@
+2026.01.26 14:53:28.348["System Name: CXDCS: System Number: 1411 - FwFsm: version is 3503"]
+2026.01.26 14:55:12.502["********************** Expanding Tree/Does not exist CODEXB_LV"]
+2026.01.26 14:55:12.503["********************** Expanding Tree/Does not exist CODEXB_LV"]
+2026.01.26 14:55:12.562["********************** Expanding Tree/Does not exist CODEXB_LV"]
+2026.01.26 14:55:12.562["********************** Expanding Tree/Does not exist CODEXB_LV"]
+2026.01.26 14:56:37.019["fwFsmTree_generateAll: Generating Device Types..."]
+2026.01.26 14:56:39.218["fwFsmTree_generateAll: Generating Object Types..."]
+2026.01.26 14:56:41.505["fwFsmTree_generateAll: Generating Tree Nodes..."]
+2026.01.26 14:56:49.338["+++++++++++++ Opening Panel CODEXB_DCS::CODEXB_DCS"]
+2026.01.26 14:57:00.266["*** INFO - petersm@cxdcs01 issued Take to CODEXB_DCS"]["CODEXB_DCS"]
+["Reporting 26-Jan-2026 14:57:00 - *** INFO - petersm@cxdcs01 issued Take to CODEXB_DCS"]
+2026.01.26 14:57:00.285["******* Taking "]["CODEXB_DCS"]
+2026.01.26 14:57:03.792["+++++++++++++ Opening Panel CODEXB_DCS::CAEN/cxcaen01/board10/channel000"]
+2026.01.26 14:57:05.823["******* Closing "]["CAEN/cxcaen01/board10/channel000"][0]
+2026.01.26 14:57:07.358["******* Closing "]["CODEXB_DCS"][0]
+2026.01.26 14:57:07.360["******* Releasing "]["CODEXB_DCS"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.i0. Value = 1.2000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.rDwn. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.rUp. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.v0. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.thresholdOvV to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.thresholdOvV. Value = 9"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.thresholdUnV to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.thresholdUnV. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripExt to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripExt. Value = 16"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripInt to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripInt. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.powerDown to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.powerDown. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.i0. Value = 1.2000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.rDwn. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.rUp. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.v0. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.thresholdOvV to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.thresholdOvV. Value = 9"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.thresholdUnV to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.thresholdUnV. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripExt to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripExt. Value = 16"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripInt to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripInt. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.powerDown to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.powerDown. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.i0. Value = 1.2000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.rDwn. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.rUp. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.v0. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.thresholdOvV to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.thresholdOvV. Value = 9"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.thresholdUnV to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.thresholdUnV. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripExt to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripExt. Value = 16"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripInt to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripInt. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.powerDown to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.powerDown. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel007.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board10/channel007.readBackSettings.i0. Value = 1.2000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel007.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board10/channel007.readBackSettings.rDwn. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel007.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board10/channel007.readBackSettings.rUp. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel007.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board10/channel007.readBackSettings.v0. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel007.settings.thresholdOvV to same value as CXDCS:CAEN/cxcaen01/board10/channel007.readBackSettings.thresholdOvV. Value = 9"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel007.settings.thresholdUnV to same value as CXDCS:CAEN/cxcaen01/board10/channel007.readBackSettings.thresholdUnV. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel007.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board10/channel007.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel007.settings.tripExt to same value as CXDCS:CAEN/cxcaen01/board10/channel007.readBackSettings.tripExt. Value = 16"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel007.settings.tripInt to same value as CXDCS:CAEN/cxcaen01/board10/channel007.readBackSettings.tripInt. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel007.settings.powerDown to same value as CXDCS:CAEN/cxcaen01/board10/channel007.readBackSettings.powerDown. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.i0. Value = 1.2000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.rDwn. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.rUp. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.v0. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.thresholdOvV to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.thresholdOvV. Value = 9"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.thresholdUnV to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.thresholdUnV. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripExt to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripExt. Value = 16"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripInt to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripInt. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.powerDown to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.powerDown. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.i0. Value = 1.2000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.rDwn. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.rUp. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.v0. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.thresholdOvV to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.thresholdOvV. Value = 9"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.thresholdUnV to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.thresholdUnV. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripExt to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripExt. Value = 16"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripInt to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripInt. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.powerDown to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.powerDown. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.i0. Value = 1.2000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.rDwn. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.rUp. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.v0. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.thresholdOvV to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.thresholdOvV. Value = 9"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.thresholdUnV to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.thresholdUnV. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripExt to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripExt. Value = 16"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripInt to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripInt. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.powerDown to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.powerDown. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel002.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board00/channel002.readBackSettings.i0. Value = 6"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel002.settings.i1 to same value as CXDCS:CAEN/cxcaen01/board00/channel002.readBackSettings.i1. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel002.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board00/channel002.readBackSettings.rDwn. Value = 2"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel002.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board00/channel002.readBackSettings.rUp. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel002.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board00/channel002.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel002.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board00/channel002.readBackSettings.v0. Value = 3.5"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel002.settings.v1 to same value as CXDCS:CAEN/cxcaen01/board00/channel002.readBackSettings.v1. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel002.settings.vMaxSoftValue to same value as CXDCS:CAEN/cxcaen01/board00/channel002.readBackSettings.vMaxSoftValue. Value = 4.5"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.i0. Value = 6"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.i1 to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.i1. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.rDwn. Value = 2"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.rUp. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.v0. Value = 1.7000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.v1 to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.v1. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.vMaxSoftValue to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.vMaxSoftValue. Value = 4.5"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.i0. Value = 6"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.i1 to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.i1. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.rDwn. Value = 2"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.rUp. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.v0. Value = 1.7000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.v1 to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.v1. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.vMaxSoftValue to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.vMaxSoftValue. Value = 4.5"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.i0. Value = 6"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.i1 to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.i1. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.rDwn. Value = 2"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.rUp. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.v0. Value = 1.7000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.v1 to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.v1. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board00/channel000.settings.vMaxSoftValue to same value as CXDCS:CAEN/cxcaen01/board00/channel000.readBackSettings.vMaxSoftValue. Value = 4.5"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.i0. Value = 1.2000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.rDwn. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.rUp. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.v0. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.thresholdOvV to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.thresholdOvV. Value = 9"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.thresholdUnV to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.thresholdUnV. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripExt to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripExt. Value = 16"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripInt to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.tripInt. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel000.settings.powerDown to same value as CXDCS:CAEN/cxcaen01/board10/channel000.readBackSettings.powerDown. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.i0. Value = 1.2000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.rDwn. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.rUp. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.v0. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.thresholdOvV to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.thresholdOvV. Value = 9"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.thresholdUnV to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.thresholdUnV. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.tripExt to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.tripExt. Value = 16"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.tripInt to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.tripInt. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.powerDown to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.powerDown. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.i0. Value = 1.2000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.rDwn. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.rUp. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.v0. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.thresholdOvV to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.thresholdOvV. Value = 9"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.thresholdUnV to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.thresholdUnV. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.tripExt to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.tripExt. Value = 16"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.tripInt to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.tripInt. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.powerDown to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.powerDown. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.i0. Value = 1.2000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.rDwn. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.rUp. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.v0. Value = 5"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.thresholdOvV to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.thresholdOvV. Value = 9"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.thresholdUnV to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.thresholdUnV. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.tripExt to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.tripExt. Value = 16"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.tripInt to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.tripInt. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel002.settings.powerDown to same value as CXDCS:CAEN/cxcaen01/board10/channel002.readBackSettings.powerDown. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.i0 to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.i0. Value = 1.2000000476837"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.rDwn to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.rDwn. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.rUp to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.rUp. Value = 500"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.v0 to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.v0. Value = 6"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.thresholdOvV to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.thresholdOvV. Value = 9"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.thresholdUnV to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.thresholdUnV. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.tripTime to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.tripTime. Value = 10"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.tripExt to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.tripExt. Value = 16"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.tripInt to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.tripInt. Value = 0"]
+["Setting CXDCS:CAEN/cxcaen01/board10/channel001.settings.powerDown to same value as CXDCS:CAEN/cxcaen01/board10/channel001.readBackSettings.powerDown. Value = 0"]
+["DU added: CODEXB_DCS_ConfDB ->>>> to domain: CODEXB_DCS"]
+2026.01.26 15:20:52.950["INFO : LVChannelConfDBInitializer -> Step 1 -> END"]
+["DU added: CODEXB_PUP_ConfDB ->>>> to domain: CODEXB_PUP"]
+2026.01.26 15:24:16.597["INFO : LVChannelConfDBInitializer -> Step 1 -> END"]
+2026.01.26 15:24:25.345["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:24:25.350["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_PUP included!!"]
+2026.01.26 15:24:25.350["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEXB_PUP included!!"]
+2026.01.26 15:24:25.543["INFO : LVChannelConfDBInitializer -> Step 2 -> Standard Recipes created!!"]
+2026.01.26 15:24:25.543["INFO : LVChannelConfDBInitializer -> Step 2 -> END"]
+2026.01.26 15:25:52.988["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:25:52.994["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_PUP included!!"]
+2026.01.26 15:25:52.994["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEXB_PUP included!!"]
+2026.01.26 15:25:53.016["INFO : LVChannelConfDBInitializer -> Step 2 -> Standard Recipes created!!"]
+2026.01.26 15:25:53.016["INFO : LVChannelConfDBInitializer -> Step 2 -> END"]
+2026.01.26 15:27:04.316["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:27:04.322["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_PUP included!!"]
+2026.01.26 15:27:04.322["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEXB_PUP included!!"]
+2026.01.26 15:27:05.462["INFO : LVChannelConfDBInitializer -> Step 2 -> Standard Recipes created!!"]
+2026.01.26 15:27:05.462["INFO : LVChannelConfDBInitializer -> Step 2 -> END"]
+2026.01.26 15:30:25.268["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:30:25.268["INFO : LVChannelConfDBInitializer -> Step 2 -> No DU to include on the RecipeCache for node CODEX_PUP!!"]
+2026.01.26 15:30:25.268["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEX_PUP included!!"]
+2026.01.26 15:30:25.289["INFO : LVChannelConfDBInitializer -> Step 2 -> Standard Recipes created!!"]
+2026.01.26 15:30:25.289["INFO : LVChannelConfDBInitializer -> Step 2 -> END"]
+2026.01.26 15:33:22.728["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:33:22.729["INFO : LVChannelConfDBInitializer -> Step 2 -> No DU to include on the RecipeCache for node CODEX_PUP!!"]
+2026.01.26 15:33:22.729["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEX_PUP included!!"]
+2026.01.26 15:33:22.759["INFO : LVChannelConfDBInitializer -> Step 2 -> Standard Recipes created!!"]
+2026.01.26 15:33:22.759["INFO : LVChannelConfDBInitializer -> Step 2 -> END"]
+2026.01.26 15:34:46.772["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:34:46.780["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_PUP included!!"]
+2026.01.26 15:34:46.780["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEXB_PUP included!!"]
+2026.01.26 15:34:46.809["fwConfigurationDB_dpGetManyDist failes to get values due to dpGet fail:"][dyn_errClass 0 items
+]
+["WARNING: _fwConfigurationDB_dataToString: FALL BACK TO PVSS TYPE CASTING FOR TYPE 1"]
+["WARNING: _fwConfigurationDB_dataToString: FALL BACK TO PVSS TYPE CASTING FOR TYPE 1"]
+["WARNING: _fwConfigurationDB_dataToString: FALL BACK TO PVSS TYPE CASTING FOR TYPE 1"]
+2026.01.26 15:35:53.133["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:35:53.139["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_PUP included!!"]
+2026.01.26 15:35:53.139["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEXB_PUP included!!"]
+2026.01.26 15:35:53.168["fwConfigurationDB_dpGetManyDist failes to get values due to dpGet fail:"][dyn_errClass 0 items
+]
+["WARNING: _fwConfigurationDB_dataToString: FALL BACK TO PVSS TYPE CASTING FOR TYPE 1"]
+["WARNING: _fwConfigurationDB_dataToString: FALL BACK TO PVSS TYPE CASTING FOR TYPE 1"]
+["WARNING: _fwConfigurationDB_dataToString: FALL BACK TO PVSS TYPE CASTING FOR TYPE 1"]
+2026.01.26 15:39:29.256["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:39:29.262["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_PUP included!!"]
+2026.01.26 15:39:29.262["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEXB_PUP included!!"]
+2026.01.26 15:41:54.733["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:41:54.739["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_PUP included!!"]
+2026.01.26 15:41:54.739["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEXB_PUP included!!"]
+2026.01.26 15:42:53.786["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:42:53.792["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_PUP included!!"]
+2026.01.26 15:42:53.792["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEXB_PUP included!!"]
+2026.01.26 15:44:46.160["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:44:46.161["INFO : LVChannelConfDBInitializer -> Step 2 -> No DU to include on the RecipeCache for node CODEX_PUP!!"]
+2026.01.26 15:44:46.161["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEX_PUP included!!"]
+2026.01.26 15:44:46.190["****"][dyn_string 0 items
+]
+2026.01.26 15:44:46.190[dyn_dyn_mixed 30 items
+     1: dyn_mixed 0 items
+
+     2: dyn_mixed 0 items
+
+     3: dyn_mixed 0 items
+
+     4: dyn_mixed 0 items
+
+     5: dyn_mixed 0 items
+
+     6: dyn_mixed 0 items
+
+     7: dyn_mixed 0 items
+
+     8: dyn_mixed 0 items
+
+     9: dyn_mixed 0 items
+
+    10: dyn_mixed 0 items
+
+    11: dyn_mixed 0 items
+
+    12: dyn_mixed 0 items
+
+    13: dyn_mixed 0 items
+
+    14: dyn_mixed 0 items
+
+    15: dyn_mixed 0 items
+
+    16: dyn_mixed 0 items
+
+    17: dyn_mixed 0 items
+
+    18: dyn_mixed 0 items
+
+    19: dyn_mixed 0 items
+
+    20: dyn_mixed 1 items
+	     1: "LVChannelRecipeType"
+
+    21: dyn_mixed 0 items
+
+    22: dyn_mixed 0 items
+
+    23: dyn_mixed 0 items
+
+    24: dyn_mixed 0 items
+
+    25: dyn_mixed 0 items
+
+    26: dyn_mixed 0 items
+
+    27: dyn_mixed 0 items
+
+    28: dyn_mixed 0 items
+
+    29: dyn_mixed 0 items
+
+    30: dyn_mixed 0 items
+
+]
+2026.01.26 15:44:46.191["INFO : LVChannelConfDBInitializer -> Step 2 -> Standard Recipes created!!"]
+2026.01.26 15:44:46.191["INFO : LVChannelConfDBInitializer -> Step 2 -> END"]
+2026.01.26 15:45:38.827["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:45:38.833["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_PUP included!!"]
+2026.01.26 15:45:38.833["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEXB_PUP included!!"]
+2026.01.26 15:45:38.858["****"][dyn_string 0 items
+]
+2026.01.26 15:45:38.859["+++++"][dyn_dyn_mixed 30 items
+     1: dyn_mixed 6 items
+	     1: "CXDCS:CAEN/cxcaen01/board10/channel000.settings.i0"
+	     2: "CXDCS:CAEN/cxcaen01/board10/channel000.settings.onOff"
+	     3: "CXDCS:CAEN/cxcaen01/board10/channel000.settings.rDwn"
+	     4: "CXDCS:CAEN/cxcaen01/board10/channel000.settings.rUp"
+	     5: "CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripTime"
+	     6: "CXDCS:CAEN/cxcaen01/board10/channel000.settings.v0"
+
+     2: dyn_mixed 6 items
+	     1: "CXDCS:CAEN/cxcaen01/board10/channel000"
+	     2: "CXDCS:CAEN/cxcaen01/board10/channel000"
+	     3: "CXDCS:CAEN/cxcaen01/board10/channel000"
+	     4: "CXDCS:CAEN/cxcaen01/board10/channel000"
+	     5: "CXDCS:CAEN/cxcaen01/board10/channel000"
+	     6: "CXDCS:CAEN/cxcaen01/board10/channel000"
+
+     3: dyn_mixed 6 items
+	     1: "FwCaenChannelA2551"
+	     2: "FwCaenChannelA2551"
+	     3: "FwCaenChannelA2551"
+	     4: "FwCaenChannelA2551"
+	     5: "FwCaenChannelA2551"
+	     6: "FwCaenChannelA2551"
+
+     4: dyn_mixed 6 items
+	     1: ".settings.i0"
+	     2: ".settings.onOff"
+	     3: ".settings.rDwn"
+	     4: ".settings.rUp"
+	     5: ".settings.tripTime"
+	     6: ".settings.v0"
+
+     5: dyn_mixed 6 items
+	     1: 22
+	     2: 23
+	     3: 22
+	     4: 22
+	     5: 22
+	     6: 22
+
+     6: dyn_mixed 6 items
+	     1: "HARDWARE"
+	     2: "HARDWARE"
+	     3: "HARDWARE"
+	     4: "HARDWARE"
+	     5: "HARDWARE"
+	     6: "HARDWARE"
+
+     7: dyn_mixed 6 items
+	     1: TRUE
+	     2: TRUE
+	     3: TRUE
+	     4: TRUE
+	     5: TRUE
+	     6: TRUE
+
+     8: dyn_mixed 6 items
+	     1: FALSE
+	     2: FALSE
+	     3: FALSE
+	     4: FALSE
+	     5: FALSE
+	     6: FALSE
+
+     9: dyn_mixed 0 items
+
+    10: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    11: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    12: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    13: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    14: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    15: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    16: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    17: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    18: dyn_mixed 0 items
+
+    19: dyn_mixed 0 items
+
+    20: dyn_mixed 1 items
+	     1: "LVChannelRecipeType"
+
+    21: dyn_mixed 0 items
+
+    22: dyn_mixed 0 items
+
+    23: dyn_mixed 0 items
+
+    24: dyn_mixed 0 items
+
+    25: dyn_mixed 0 items
+
+    26: dyn_mixed 0 items
+
+    27: dyn_mixed 0 items
+
+    28: dyn_mixed 0 items
+
+    29: dyn_mixed 0 items
+
+    30: dyn_mixed 0 items
+
+]
+2026.01.26 15:46:47.632["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:46:47.638["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_PUP included!!"]
+2026.01.26 15:46:47.638["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEXB_PUP included!!"]
+2026.01.26 15:46:47.673["****"][dyn_string 6 items
+     1: "10"
+     2: "TRUE"
+     3: "10"
+     4: "10"
+     5: "3"
+     6: "5"
+]
+2026.01.26 15:46:47.673["+++++"][dyn_dyn_mixed 30 items
+     1: dyn_mixed 6 items
+	     1: "CXDCS:CAEN/cxcaen01/board10/channel000.settings.i0"
+	     2: "CXDCS:CAEN/cxcaen01/board10/channel000.settings.onOff"
+	     3: "CXDCS:CAEN/cxcaen01/board10/channel000.settings.rDwn"
+	     4: "CXDCS:CAEN/cxcaen01/board10/channel000.settings.rUp"
+	     5: "CXDCS:CAEN/cxcaen01/board10/channel000.settings.tripTime"
+	     6: "CXDCS:CAEN/cxcaen01/board10/channel000.settings.v0"
+
+     2: dyn_mixed 6 items
+	     1: "CXDCS:CAEN/cxcaen01/board10/channel000"
+	     2: "CXDCS:CAEN/cxcaen01/board10/channel000"
+	     3: "CXDCS:CAEN/cxcaen01/board10/channel000"
+	     4: "CXDCS:CAEN/cxcaen01/board10/channel000"
+	     5: "CXDCS:CAEN/cxcaen01/board10/channel000"
+	     6: "CXDCS:CAEN/cxcaen01/board10/channel000"
+
+     3: dyn_mixed 6 items
+	     1: "FwCaenChannelA2551"
+	     2: "FwCaenChannelA2551"
+	     3: "FwCaenChannelA2551"
+	     4: "FwCaenChannelA2551"
+	     5: "FwCaenChannelA2551"
+	     6: "FwCaenChannelA2551"
+
+     4: dyn_mixed 6 items
+	     1: ".settings.i0"
+	     2: ".settings.onOff"
+	     3: ".settings.rDwn"
+	     4: ".settings.rUp"
+	     5: ".settings.tripTime"
+	     6: ".settings.v0"
+
+     5: dyn_mixed 6 items
+	     1: 22
+	     2: 23
+	     3: 22
+	     4: 22
+	     5: 22
+	     6: 22
+
+     6: dyn_mixed 6 items
+	     1: "HARDWARE"
+	     2: "HARDWARE"
+	     3: "HARDWARE"
+	     4: "HARDWARE"
+	     5: "HARDWARE"
+	     6: "HARDWARE"
+
+     7: dyn_mixed 6 items
+	     1: TRUE
+	     2: TRUE
+	     3: TRUE
+	     4: TRUE
+	     5: TRUE
+	     6: TRUE
+
+     8: dyn_mixed 6 items
+	     1: FALSE
+	     2: FALSE
+	     3: FALSE
+	     4: FALSE
+	     5: FALSE
+	     6: FALSE
+
+     9: dyn_mixed 6 items
+	     1: "10"
+	     2: "TRUE"
+	     3: "10"
+	     4: "10"
+	     5: "3"
+	     6: "5"
+
+    10: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    11: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    12: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    13: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    14: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    15: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    16: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    17: dyn_mixed 6 items
+	     1: -?-
+	     2: -?-
+	     3: -?-
+	     4: -?-
+	     5: -?-
+	     6: -?-
+
+    18: dyn_mixed 0 items
+
+    19: dyn_mixed 0 items
+
+    20: dyn_mixed 1 items
+	     1: "LVChannelRecipeType"
+
+    21: dyn_mixed 0 items
+
+    22: dyn_mixed 0 items
+
+    23: dyn_mixed 0 items
+
+    24: dyn_mixed 0 items
+
+    25: dyn_mixed 0 items
+
+    26: dyn_mixed 0 items
+
+    27: dyn_mixed 0 items
+
+    28: dyn_mixed 0 items
+
+    29: dyn_mixed 0 items
+
+    30: dyn_mixed 0 items
+
+]
+2026.01.26 15:46:47.674["INFO : LVChannelConfDBInitializer -> Step 2 -> Standard Recipes created!!"]
+2026.01.26 15:46:47.674["INFO : LVChannelConfDBInitializer -> Step 2 -> END"]
+2026.01.26 15:47:37.206["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:47:37.322["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_DCS included!!"]
+2026.01.26 15:47:37.327["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_PUP included!!"]
+2026.01.26 15:47:37.327["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEXB_DCS included!!"]
+2026.01.26 15:47:37.387["****"][dyn_string 288 items
+     1: "10"
+     2: "TRUE"
+     3: "10"
+     4: "10"
+     5: "3"
+     6: "5"
+     7: "10"
+     8: "TRUE"
+     9: "10"
+    10: "10"
+    11: "3"
+    12: "5"
+    13: "10"
+    14: "TRUE"
+    15: "10"
+    16: "10"
+    17: "3"
+    18: "5"
+    19: "10"
+    20: "TRUE"
+    21: "10"
+    22: "10"
+    23: "3"
+    24: "5"
+    25: "10"
+    26: "TRUE"
+    27: "10"
+    28: "10"
+    29: "3"
+    30: "5"
+    31: "10"
+    32: "TRUE"
+    33: "10"
+    34: "10"
+    35: "3"
+    36: "5"
+    37: "10"
+    38: "TRUE"
+    39: "10"
+    40: "10"
+    41: "3"
+    42: "5"
+    43: "10"
+    44: "TRUE"
+    45: "10"
+    46: "10"
+    47: "3"
+    48: "5"
+    49: "10"
+    50: "TRUE"
+    51: "10"
+    52: "10"
+    53: "3"
+    54: "5"
+    55: "10"
+    56: "TRUE"
+    57: "10"
+    58: "10"
+    59: "3"
+    60: "5"
+    61: "10"
+    62: "TRUE"
+    63: "10"
+    64: "10"
+    65: "3"
+    66: "5"
+    67: "10"
+    68: "TRUE"
+    69: "10"
+    70: "10"
+    71: "3"
+    72: "5"
+    73: "10"
+    74: "TRUE"
+    75: "10"
+    76: "10"
+    77: "3"
+    78: "5"
+    79: "10"
+    80: "TRUE"
+    81: "10"
+    82: "10"
+    83: "3"
+    84: "5"
+    85: "10"
+    86: "TRUE"
+    87: "10"
+    88: "10"
+    89: "3"
+    90: "5"
+    91: "10"
+    92: "TRUE"
+    93: "10"
+    94: "10"
+    95: "3"
+    96: "5"
+    97: "10"
+    98: "TRUE"
+    99: "10"
+   100: "10"
+   101: "3"
+   102: "5"
+   103: "10"
+   104: "TRUE"
+   105: "10"
+   106: "10"
+   107: "3"
+   108: "5"
+   109: "10"
+   110: "TRUE"
+   111: "10"
+   112: "10"
+   113: "3"
+   114: "5"
+   115: "10"
+   116: "TRUE"
+   117: "10"
+   118: "10"
+   119: "3"
+   120: "5"
+   121: "10"
+   122: "TRUE"
+   123: "10"
+   124: "10"
+   125: "3"
+   126: "5"
+   127: "10"
+   128: "TRUE"
+   129: "10"
+   130: "10"
+   131: "3"
+   132: "5"
+   133: "10"
+   134: "TRUE"
+   135: "10"
+   136: "10"
+   137: "3"
+   138: "5"
+   139: "10"
+   140: "TRUE"
+   141: "10"
+   142: "10"
+   143: "3"
+   144: "5"
+   145: "10"
+   146: "TRUE"
+   147: "10"
+   148: "10"
+   149: "3"
+   150: "5"
+   151: "10"
+   152: "TRUE"
+   153: "10"
+   154: "10"
+   155: "3"
+   156: "5"
+   157: "10"
+   158: "TRUE"
+   159: "10"
+   160: "10"
+   161: "3"
+   162: "5"
+   163: "10"
+   164: "TRUE"
+   165: "10"
+   166: "10"
+   167: "3"
+   168: "5"
+   169: "10"
+   170: "TRUE"
+   171: "10"
+   172: "10"
+   173: "3"
+   174: "5"
+   175: "10"
+   176: "TRUE"
+   177: "10"
+   178: "10"
+   179: "3"
+   180: "5"
+   181: "10"
+   182: "TRUE"
+   183: "10"
+   184: "10"
+   185: "3"
+   186: "5"
+   187: "10"
+   188: "TRUE"
+   189: "10"
+   190: "10"
+   191: "3"
+   192: "5"
+   193: "10"
+   194: "TRUE"
+   195: "10"
+   196: "10"
+   197: "3"
+   198: "5"
+   199: "10"
+   200: "TRUE"
+   201: "10"
+   202: "10"
+   203: "3"
+   204: "5"
+   205: "10"
+   206: "TRUE"
+   207: "10"
+   208: "10"
+   209: "3"
+   210: "5"
+   211: "10"
+   212: "TRUE"
+   213: "10"
+   214: "10"
+   215: "3"
+   216: "5"
+   217: "10"
+   218: "TRUE"
+   219: "10"
+   220: "10"
+   221: "3"
+   222: "5"
+   223: "10"
+   224: "TRUE"
+   225: "10"
+   226: "10"
+   227: "3"
+   228: "5"
+   229: "10"
+   230: "TRUE"
+   231: "10"
+   232: "10"
+   233: "3"
+   234: "5"
+   235: "10"
+   236: "TRUE"
+   237: "10"
+   238: "10"
+   239: "3"
+   240: "5"
+   241: "10"
+   242: "TRUE"
+   243: "10"
+   244: "10"
+   245: "3"
+   246: "5"
+   247: "10"
+   248: "TRUE"
+   249: "10"
+   250: "10"
+   251: "3"
+   252: "5"
+   253: "10"
+   254: "TRUE"
+   255: "10"
+   256: "10"
+   257: "3"
+   258: "5"
+   259: "10"
+   260: "TRUE"
+   261: "10"
+   262: "10"
+   263: "3"
+   264: "5"
+   265: "10"
+   266: "TRUE"
+   267: "10"
+   268: "10"
+   269: "3"
+   270: "5"
+   271: "10"
+   272: "TRUE"
+   273: "10"
+   274: "10"
+   275: "3"
+   276: "5"
+   277: "10"
+   278: "TRUE"
+   279: "10"
+   280: "10"
+   281: "3"
+   282: "5"
+   283: "10"
+   284: "TRUE"
+   285: "10"
+   286: "10"
+   287: "3"
+   288: "5"
+]
+2026.01.26 15:47:37.395["INFO : LVChannelConfDBInitializer -> Step 2 -> Standard Recipes created!!"]
+2026.01.26 15:47:37.395["INFO : LVChannelConfDBInitializer -> Step 2 -> END"]
+2026.01.26 15:49:27.048["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:49:27.055["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_PUP included!!"]
+2026.01.26 15:49:27.055["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEXB_PUP included!!"]
+2026.01.26 15:49:27.121["INFO : LVChannelConfDBInitializer -> Step 2 -> Standard Recipes created!!"]
+2026.01.26 15:49:27.122["INFO : LVChannelConfDBInitializer -> Step 2 -> END"]
+2026.01.26 15:49:56.118["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:49:56.124["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_PUP included!!"]
+2026.01.26 15:49:56.124["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEXB_PUP included!!"]
+2026.01.26 15:49:56.192["INFO : LVChannelConfDBInitializer -> Step 2 -> Standard Recipes created!!"]
+2026.01.26 15:49:56.193["INFO : LVChannelConfDBInitializer -> Step 2 -> END"]
+2026.01.26 15:51:47.932["INFO : LVChannelConfDBInitializer -> Step 2 -> Save Properties created!!"]
+2026.01.26 15:51:48.043["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_DCS included!!"]
+2026.01.26 15:51:48.048["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU's for node CODEXB_PUP included!!"]
+2026.01.26 15:51:48.049["INFO : LVChannelConfDBInitializer -> Step 2 -> All DU DPE's for node CODEXB_DCS included!!"]
+2026.01.26 15:51:48.131["INFO : LVChannelConfDBInitializer -> Step 2 -> Standard Recipes created!!"]
+2026.01.26 15:51:48.132["INFO : LVChannelConfDBInitializer -> Step 2 -> END"]
+2026.01.26 15:52:40.778["+++++++++++++ Opening Panel CODEXB_PUP::CODEXB_PUP"]
+2026.01.26 15:52:50.477["*** INFO - petersm@cxdcs01 issued Take to CODEXB_PUP"]["CODEXB_PUP"]
+["Reporting 26-Jan-2026 15:52:50 - *** INFO - petersm@cxdcs01 issued Take to CODEXB_PUP"]
+2026.01.26 15:52:50.510["******* Taking "]["CODEXB_PUP"]
+2026.01.26 15:52:54.340["Param panel"]["CXDCS:FwFSMConfDB_DCS"]["NOT_READY"]["LOAD"]["CODEXB_PUP"]["CODEXB_PUP_ConfDB"]["LOAD"][dyn_string 1 items
+     1: "string sMode = \"PHYSICS\""
+]
+2026.01.26 15:54:10.539["******* Closing "]["CODEXB_PUP"][0]
+2026.01.26 15:54:10.540["******* Releasing "]["CODEXB_PUP"]

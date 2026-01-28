@@ -1,0 +1,55 @@
+
+ SMI++ State Manager Version - v67r2- Date : 25-September-2024:14:09
+
+Options:
+ -d 1 -u 1 -t 1 -dns cxdcs01 -loopMaxChanges 25 -loopMaxChangesFatal 5000 -loopMinDuration -1
+
+    SMI Domain : CODEXB_PUP
+    Input File : /opt/winccoa_projects/CXDCS/smi/CODEXB_PUP.sobj
+
+2026.01.26 15:52:45.386 - SMI++ Initiator started
+ Number of SMI Objects instantiated : 11
+ Number of SMI Classes instantiated : 10
+ Number of Object Sets instantiated : 8
+2026.01.26 15:52:45.390 - SMI++ Initiator Finished
+
+2026.01.26 15:52:45.390 - SMI++   Logic Engine started execution
+2026.01.26 15:52:45.390 - <&ALLOC> starting up in state <NOT_ALLOCATED>
+2026.01.26 15:52:45.390 - <&DOMAIN> starting up in state <READY>
+2026.01.26 15:52:45.390 - <CODEXB_PUP> starting up in state <NOT_READY>
+2026.01.26 15:52:45.390 - <CODEXB_PUP_FWCNM> starting up in state <COMPLETE>
+2026.01.26 15:52:45.390 - <CODEXB_PUP_FWM> starting up in state <EXCLUDED>
+2026.01.26 15:52:45.390 - <FWCAENCHANNELA2551_FWDM> starting up in state <READY>
+2026.01.26 15:52:45.390 - CAEN:CXCAEN01:BOARD10:CHANNEL000 starting up in state :&INITIAL
+2026.01.26 15:52:45.390 - <FWFSMCONFDB_DCS_FWDM> starting up in state <READY>
+2026.01.26 15:52:45.390 - CODEXB_PUP_CONFDB starting up in state :&INITIAL
+2026.01.26 15:52:45.390 - <FWDEVMODE_FWDM> starting up in state <READY>
+2026.01.26 15:52:45.390 - CODEXB_PUP_FWDM starting up in state :&INITIAL
+2026.01.26 15:52:45.391 - <&ALLOC> in state <NOT_ALLOCATED>
+2026.01.26 15:52:45.391 - <&DOMAIN> in state <READY>
+2026.01.26 15:52:45.391 - <CODEXB_PUP> in state <NOT_READY>
+2026.01.26 15:52:45.391 - <CODEXB_PUP_FWCNM> in state <COMPLETE>
+2026.01.26 15:52:45.391 - <CODEXB_PUP_FWM> in state <EXCLUDED>
+2026.01.26 15:52:45.391 - <FWCAENCHANNELA2551_FWDM> in state <READY>
+2026.01.26 15:52:45.391 - <FWFSMCONFDB_DCS_FWDM> in state <READY>
+2026.01.26 15:52:45.391 - <FWDEVMODE_FWDM> in state <READY>
+2026.01.26 15:52:45.391 - <CAEN:CXCAEN01:BOARD10:CHANNEL000> in state <DEAD> converted from <$DEAD>
+2026.01.26 15:52:45.391 - <CODEXB_PUP_CONFDB> in state <DEAD> converted from <$DEAD>
+2026.01.26 15:52:45.391 - <CODEXB_PUP_FWDM> in state <DEAD> converted from <$DEAD>
+2026.01.26 15:52:46.302 - <CAEN:CXCAEN01:BOARD10:CHANNEL000> in state <DEAD> converted from <$DEAD>
+2026.01.26 15:52:46.302 - <CODEXB_PUP_CONFDB> in state <DEAD> converted from <$DEAD>
+2026.01.26 15:52:46.302 - <CODEXB_PUP_FWDM> in state <DEAD> converted from <$DEAD>
+2026.01.26 15:52:46.330 - <CODEXB_PUP_FWDM> in state <ENABLED>
+2026.01.26 15:52:47.333 - <CAEN:CXCAEN01:BOARD10:CHANNEL000> in state <ERROR/EXTERNALY(S)=\042UNKNOWN\042>
+2026.01.26 15:52:47.333 - <CODEXB_PUP> in state <ERROR>
+2026.01.26 15:52:47.334 - <CODEXB_PUP_CONFDB> in state <NOT_READY>
+
+2026.01.26 15:52:50.511 - <CODEXB_PUP_FWM> External action <TAKE/OWNER=CXDCS:Manager3/EXCLUSIVE=YES/&ID(S)=173816@cxdcs01.lbdaq.cern.ch/&CONN_ID(I)=4>
+2026.01.26 15:52:50.511 - <CODEXB_PUP_FWM> executing action <TAKE/OWNER=CXDCS:Manager3/EXCLUSIVE=YES>
+2026.01.26 15:52:50.511 - <CODEXB_PUP_FWM> in state <INLOCAL>
+2026.01.26 15:52:58.549 - <CODEXB_PUP_CONFDB> in state <READY>
+2026.01.26 15:53:18.664 - <CODEXB_PUP_CONFDB> in state <NOT_READY>
+
+2026.01.26 15:54:10.540 - <CODEXB_PUP_FWM> External action <RELEASE/OWNER=CXDCS:Manager3/&ID(S)=173816@cxdcs01.lbdaq.cern.ch/&CONN_ID(I)=4>
+2026.01.26 15:54:10.540 - <CODEXB_PUP_FWM> executing action <RELEASE/OWNER=CXDCS:Manager3>
+2026.01.26 15:54:10.541 - <CODEXB_PUP_FWM> in state <EXCLUDED>

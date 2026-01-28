@@ -11,16 +11,24 @@ distributed = 1
 userName = "root"
 password = ""
 mxProxy = "none"
+pmonPort = 14110
+dataPort = 14111
+eventPort = 14112
+[dist]
+distPort = 14117
 [ui]
-#--------- begin lbFsmDomains         - Do not edit it manually
-LoadCtrlLibs = "lbFSMConfDB/lbFSMConfDB.ctl"
-#----------- end lbFsmDomains         -------------------------
 #--------- begin fwAccessControl      - Do not edit it manually
 LoadCtrlLibs = "fwAccessControl/fwAccessControl.ctc"
 #----------- end fwAccessControl      -------------------------
 #--------- begin fwTrending3          - Do not edit it manually
 scriptEditorParseLibs = "classes/fwTrending/FwTrending_*.ctl"
 #----------- end fwTrending3          -------------------------
+#--------- begin fwConfigurationDB    - Do not edit it manually
+# To enforce synchronous (blocking) mode of CtrlRDBAccess operations
+# enable the fwConfigurationDB_ForceSynchronousMode = 1 in the [ui] or [ctrl]
+# block; [ui_X] and [ctrl_X] will also be checked:
+#fwConfigurationDB_ForceSynchronousMode = 1
+#----------- end fwConfigurationDB    -------------------------
 #--------- begin fwCore               - Do not edit it manually
 LoadCtrlLibs = "AAA_FwLibStartup_UI.ctl"
 #----------- end fwCore               -------------------------
@@ -37,22 +45,37 @@ visionResizeMode = "Zoom"
 #----------- end fwGeneral            -------------------------
 #--------- begin fwStdUi              - Do not edit it manually
 scriptEditorParseLibs = "classes/fwStdUi/Fw*.ctl"
+scriptEditorParseLibs = "classes/fwStdUi/themes/Fw*.ctl"
+### uncomment the entry below to enable UI Themes support
+# fwStdUiThemesEnable = 1
+### set the default style (built-ins: "default","fwStdUi-Light","FwStdUi-Dark")
+### note that the styles must be enabled for it to be effective
+# fwStdUiStartupTheme = "default"
+### if you want to completely disable loading the css files on startup
+### (which happens even if fwStdUiThemesEnable is not set)
+### then uncomment this one:
+# fwStdUiDisableStylesheetsOnStartup = 1
+# this is auto-loaded to enforce CSS being applied on startup
+LoadCtrlLibs = "classes/fwStdUi/FwStdUiTheme.ctl"
 #----------- end fwStdUi              -------------------------
 #--------- begin fwStdLib             - Do not edit it manually
 scriptEditorParseLibs = "classes/fwStdLib/Fw*.ctl"
 scriptEditorParseLibs = "fwStdLib/fw*.ctl"
 #----------- end fwStdLib             -------------------------
+#--------- begin lbFsmDomains         - Do not edit it manually
+LoadCtrlLibs = "lbFSMConfDB/lbFSMConfDB.ctl"
+#----------- end lbFsmDomains         -------------------------
 defaultFont = "Noto Sans"
 activeIconTheme = ""
 LoadCtrlLibs = "fwInstallation/fwInstallation.ctl"
 defaultPanelFormat = "XML"
 [ctrl]
-#--------- begin lbFsmDomains         - Do not edit it manually
-LoadCtrlLibs = "lbFSMConfDB/lbFSMConfDB.ctl"
-#----------- end lbFsmDomains         -------------------------
 #--------- begin fwCore               - Do not edit it manually
 LoadCtrlLibs = "AAA_FwLibStartup.ctl"
 #----------- end fwCore               -------------------------
+#--------- begin lbFsmDomains         - Do not edit it manually
+LoadCtrlLibs = "lbFSMConfDB/lbFSMConfDB.ctl"
+#----------- end lbFsmDomains         -------------------------
 LoadCtrlLibs = "fwInstallation/fwInstallation.ctl"
 [valarch]
 #--------- begin fwGeneral            - Do not edit it manually

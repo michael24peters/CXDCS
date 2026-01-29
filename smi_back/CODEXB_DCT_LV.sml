@@ -2,123 +2,94 @@ class: TOP_DCS_Domain_v1_CLASS
 !panel: DCS_Domain_v1.pnl
     state: NOT_READY
     !color: FwStateAttention1
-        when ( any_in FWCHILDREN_FWSETSTATES in_state {ERROR, EMERGENCY_OFF} )  move_to ERROR
-        when ( all_in FWCHILDREN_FWSETSTATES in_state OFF )  move_to OFF
-        when ( all_in FWCHILDREN_FWSETSTATES in_state READY )  move_to READY
+        when ( any_in FWCAENCHANNELA2551_FWSETSTATES in_state {ERROR, EMERGENCY_OFF} )  move_to ERROR
+        when ( all_in FWCAENCHANNELA2551_FWSETSTATES in_state OFF )  move_to OFF
+        when ( all_in FWCAENCHANNELA2551_FWSETSTATES in_state READY )  move_to READY
         action: Switch_ON(string RUN_TYPE = "PHYSICS")	!visible: 1
-            do LOAD(sMode=RUN_TYPE) all_in FWFSMCONFDB_DCS_FWSETACTIONS
-            if ( any_in FWFSMCONFDB_DCS_FWSETSTATES not_in_state READY )  then
-              move_to ERROR
-            endif
-            do APPLY_RECIPE all_in FWFSMCONFDB_DCS_FWSETACTIONS
-            do Switch_ON(RUN_TYPE=RUN_TYPE) all_in FWCHILDREN_FWSETACTIONS
-            if ( any_in FWCHILDREN_FWSETSTATES not_in_state READY )  then
+            do Switch_ON(RUN_TYPE=RUN_TYPE) all_in FWCAENCHANNELA2551_FWSETACTIONS
+            if ( any_in FWCAENCHANNELA2551_FWSETSTATES not_in_state READY )  then
               move_to NOT_READY
             endif
             move_to READY
         action: Switch_OFF	!visible: 1
-            do Switch_OFF all_in FWCHILDREN_FWSETACTIONS
-            if ( any_in FWCHILDREN_FWSETSTATES not_in_state OFF )  then
+            do Switch_OFF all_in FWCAENCHANNELA2551_FWSETACTIONS
+            if ( any_in FWCAENCHANNELA2551_FWSETSTATES not_in_state OFF )  then
               move_to NOT_READY
             endif
             move_to OFF
         action: Do_Emergency_OFF	!visible: 0
-            do Do_Emergency_OFF all_in FWCHILDREN_FWSETACTIONS
-            if ( any_in FWCHILDREN_FWSETSTATES not_in_state EMERGENCY_OFF )  then
+            do Do_Emergency_OFF all_in FWCAENCHANNELA2551_FWSETACTIONS
+            if ( any_in FWCAENCHANNELA2551_FWSETSTATES not_in_state EMERGENCY_OFF )  then
               move_to ERROR
             endif
             move_to EMERGENCY_OFF
         action: Load(string RUN_TYPE = "PHYSICS")	!visible: 1
-            do Reset all_in FWCHILDREN_FWSETACTIONS
-            do UNLOAD all_in FWFSMCONFDB_DCS_FWSETACTIONS
-            if ( any_in FWFSMCONFDB_DCS_FWSETSTATES not_in_state NOT_READY )  then
-              move_to ERROR
-            endif
-            do LOAD(RUN_TYPE=RUN_TYPE,sMode=RUN_TYPE) all_in FWCHILDREN_FWSETACTIONS
-            if ( any_in FWFSMCONFDB_DCS_FWSETSTATES not_in_state READY )  then
-              move_to ERROR
-            endif
+            do Reset all_in FWCAENCHANNELA2551_FWSETACTIONS
+            do LOAD(RUN_TYPE=RUN_TYPE,sMode=RUN_TYPE) all_in FWCAENCHANNELA2551_FWSETACTIONS
             move_to NOT_READY
         action: Reset	!visible: 1
-            do Reset all_in FWCHILDREN_FWSETACTIONS
-            do UNLOAD all_in FWFSMCONFDB_DCS_FWSETACTIONS
-            if ( any_in FWFSMCONFDB_DCS_FWSETSTATES not_in_state NOT_READY )  then
-              move_to ERROR
-            endif
+            do Reset all_in FWCAENCHANNELA2551_FWSETACTIONS
             move_to NOT_READY
     state: READY
     !color: FwStateOKPhysics
-        when ( any_in FWCHILDREN_FWSETSTATES in_state {ERROR, EMERGENCY_OFF} )  move_to ERROR
-        when ( all_in FWCHILDREN_FWSETSTATES in_state OFF )  move_to OFF
-        when ( any_in FWCHILDREN_FWSETSTATES not_in_state READY )  move_to NOT_READY
+        when ( any_in FWCAENCHANNELA2551_FWSETSTATES in_state {ERROR, EMERGENCY_OFF} )  move_to ERROR
+        when ( all_in FWCAENCHANNELA2551_FWSETSTATES in_state OFF )  move_to OFF
+        when ( any_in FWCAENCHANNELA2551_FWSETSTATES not_in_state READY )  move_to NOT_READY
         action: Switch_OFF	!visible: 1
-            do Switch_OFF all_in FWCHILDREN_FWSETACTIONS
-            if ( any_in FWCHILDREN_FWSETSTATES not_in_state OFF )  then
+            do Switch_OFF all_in FWCAENCHANNELA2551_FWSETACTIONS
+            if ( any_in FWCAENCHANNELA2551_FWSETSTATES not_in_state OFF )  then
               move_to NOT_READY
             endif
             move_to OFF
         action: Do_Emergency_OFF	!visible: 0
-            do Do_Emergency_OFF all_in FWCHILDREN_FWSETACTIONS
-            if ( any_in FWCHILDREN_FWSETSTATES not_in_state EMERGENCY_OFF )  then
+            do Do_Emergency_OFF all_in FWCAENCHANNELA2551_FWSETACTIONS
+            if ( any_in FWCAENCHANNELA2551_FWSETSTATES not_in_state EMERGENCY_OFF )  then
               move_to ERROR
             endif
             move_to EMERGENCY_OFF
         action: Reset	!visible: 1
-            do Reset all_in FWCHILDREN_FWSETACTIONS
-            do UNLOAD all_in FWFSMCONFDB_DCS_FWSETACTIONS
-            if ( any_in FWFSMCONFDB_DCS_FWSETSTATES not_in_state NOT_READY )  then
-              move_to ERROR
-            endif
+            do Reset all_in FWCAENCHANNELA2551_FWSETACTIONS
             move_to NOT_READY
     state: OFF
     !color: FwStateOKNotPhysics
-        when ( any_in FWCHILDREN_FWSETSTATES in_state {ERROR, EMERGENCY_OFF} )  move_to ERROR
-        when ( all_in FWCHILDREN_FWSETSTATES in_state READY )  move_to READY
-        when ( any_in FWCHILDREN_FWSETSTATES not_in_state OFF )  move_to NOT_READY
+        when ( any_in FWCAENCHANNELA2551_FWSETSTATES in_state {ERROR, EMERGENCY_OFF} )  move_to ERROR
+        when ( all_in FWCAENCHANNELA2551_FWSETSTATES in_state READY )  move_to READY
+        when ( any_in FWCAENCHANNELA2551_FWSETSTATES not_in_state OFF )  move_to NOT_READY
         action: Switch_ON(string RUN_TYPE = "PHYSICS")	!visible: 1
-            do LOAD(sMode=RUN_TYPE) all_in FWFSMCONFDB_DCS_FWSETACTIONS
-            if ( any_in FWFSMCONFDB_DCS_FWSETSTATES not_in_state READY )  then
-              move_to ERROR
-            endif
-            do APPLY_RECIPE all_in FWFSMCONFDB_DCS_FWSETACTIONS
-            do Switch_ON(RUN_TYPE=RUN_TYPE) all_in FWCHILDREN_FWSETACTIONS
-            if ( any_in FWCHILDREN_FWSETSTATES not_in_state READY )  then
+            do Switch_ON(RUN_TYPE=RUN_TYPE) all_in FWCAENCHANNELA2551_FWSETACTIONS
+            if ( any_in FWCAENCHANNELA2551_FWSETSTATES not_in_state READY )  then
               move_to NOT_READY
             endif
             move_to READY
         action: Do_Emergency_OFF	!visible: 0
-            do Do_Emergency_OFF all_in FWCHILDREN_FWSETACTIONS
-            if ( any_in FWCHILDREN_FWSETSTATES not_in_state EMERGENCY_OFF )  then
+            do Do_Emergency_OFF all_in FWCAENCHANNELA2551_FWSETACTIONS
+            if ( any_in FWCAENCHANNELA2551_FWSETSTATES not_in_state EMERGENCY_OFF )  then
               move_to ERROR
             endif
             move_to EMERGENCY_OFF
         action: Reset	!visible: 1
-            do Reset all_in FWCHILDREN_FWSETACTIONS
-            do UNLOAD all_in FWFSMCONFDB_DCS_FWSETACTIONS
-            if ( any_in FWFSMCONFDB_DCS_FWSETSTATES not_in_state NOT_READY )  then
-              move_to ERROR
-            endif
+            do Reset all_in FWCAENCHANNELA2551_FWSETACTIONS
             move_to NOT_READY
     state: ERROR
     !color: FwStateAttention3
-        when ( all_in FWCHILDREN_FWSETSTATES in_state EMERGENCY_OFF )  move_to EMERGENCY_OFF
-        when ( all_in FWCHILDREN_FWSETSTATES not_in_state {ERROR,EMERGENCY_OFF} )  move_to NOT_READY
+        when ( all_in FWCAENCHANNELA2551_FWSETSTATES in_state EMERGENCY_OFF )  move_to EMERGENCY_OFF
+        when ( all_in FWCAENCHANNELA2551_FWSETSTATES not_in_state {ERROR,EMERGENCY_OFF} )  move_to NOT_READY
         action: Recover	!visible: 1
-            do Recover all_in FWCHILDREN_FWSETACTIONS
-            if ( any_in FWCHILDREN_FWSETSTATES in_state ERROR )  then
+            do Recover all_in FWCAENCHANNELA2551_FWSETACTIONS
+            if ( any_in FWCAENCHANNELA2551_FWSETSTATES in_state ERROR )  then
                 move_to ERROR
             endif
             move_to NOT_READY
         action: Do_Emergency_OFF	!visible: 0
-            do Do_Emergency_OFF all_in FWCHILDREN_FWSETACTIONS
-            if ( any_in FWCHILDREN_FWSETSTATES not_in_state EMERGENCY_OFF )  then
+            do Do_Emergency_OFF all_in FWCAENCHANNELA2551_FWSETACTIONS
+            if ( any_in FWCAENCHANNELA2551_FWSETSTATES not_in_state EMERGENCY_OFF )  then
               move_to ERROR
             endif
             move_to EMERGENCY_OFF
     state: EMERGENCY_OFF
     !color: FwStateAttention3
         action: Clear_Emergency	!visible: 2
-            do Clear_Emergency all_in FWCHILDREN_FWSETACTIONS
+            do Clear_Emergency all_in FWCAENCHANNELA2551_FWSETACTIONS
             move_to NOT_READY
 
 object: CODEXB_DCT_LV is_of_class TOP_DCS_Domain_v1_CLASS
@@ -306,57 +277,6 @@ objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board
 	CAEN:cxcaen01:board15:channel006,
 	CAEN:cxcaen01:board15:channel007 }
 
-class: FwFSMConfDB_DCS_FwDevMode_CLASS
-    state: READY
-        action: Disable(Device)
-            remove &VAL_OF_Device from FWFSMCONFDB_DCS_FWSETSTATES
-            remove &VAL_OF_Device from FWFSMCONFDB_DCS_FWSETACTIONS
-            move_to READY
-        action: Enable(Device)
-            insert &VAL_OF_Device in FWFSMCONFDB_DCS_FWSETSTATES
-            insert &VAL_OF_Device in FWFSMCONFDB_DCS_FWSETACTIONS
-            move_to READY
-
-object: FwFSMConfDB_DCS_FWDM is_of_class FwFSMConfDB_DCS_FwDevMode_CLASS
-
-
-class: FwFSMConfDB_DCS_CLASS/associated
-!panel: FwFSMConfDB|FwFSMConfDB_DCS.pnl
-    state: NOT_READY
-    !color: FwStateAttention1
-        action: LOAD(string sMode = "PHYSICS")	!visible: 1
-        action: Switch_ON	!visible: 0
-        action: Switch_OFF	!visible: 0
-        action: Do_Emergency_OFF	!visible: 0
-        action: APPLY_RECIPE(string sMode = "PHYSICS")	!visible: 0
-    state: OFF
-    !color: FwStateOKNotPhysics
-        action: Switch_ON	!visible: 0
-        action: APPLY_RECIPE(string sMode = "PHYSICS")	!visible: 0
-        action: LOAD(string sMode = "PHYSICS")	!visible: 0
-        action: UNLOAD	!visible: 1
-        action: Do_Emergency_OFF	!visible: 0
-    state: READY
-    !color: FwStateOKPhysics
-        action: APPLY_RECIPE(string sMode = "PHYSICS")	!visible: 0
-        action: Switch_OFF	!visible: 0
-        action: Switch_ON	!visible: 0
-        action: UNLOAD	!visible: 1
-        action: LOAD(string sMode = "PHYSICS")	!visible: 0
-        action: Do_Emergency_OFF	!visible: 0
-    state: ERROR
-    !color: FwStateAttention3
-        action: RECOVER	!visible: 1
-        action: Do_Emergency_OFF	!visible: 0
-    state: EMERGENCY_OFF
-    !color: FwStateAttention3
-        action: Clear_Emergency	!visible: 1
-
-object: CODEXB_DCT_LV_ConfDB is_of_class FwFSMConfDB_DCS_CLASS
-
-objectset: FWFSMCONFDB_DCS_FWSETSTATES is_of_class VOID {CODEXB_DCT_LV_ConfDB }
-objectset: FWFSMCONFDB_DCS_FWSETACTIONS is_of_class VOID {CODEXB_DCT_LV_ConfDB }
-
 class: FwDevMode_FwDevMode_CLASS
     state: READY
         action: Disable(Device)
@@ -384,8 +304,6 @@ objectset: FWDEVMODE_FWSETSTATES is_of_class VOID {CODEXB_DCT_LV_FWDM }
 objectset: FWDEVMODE_FWSETACTIONS is_of_class VOID {CODEXB_DCT_LV_FWDM }
 
 
-objectset: FWCHILDREN_FWSETACTIONS union {FWCAENCHANNELA2551_FWSETACTIONS,
-	FWFSMCONFDB_DCS_FWSETACTIONS } is_of_class VOID
-objectset: FWCHILDREN_FWSETSTATES union {FWCAENCHANNELA2551_FWSETSTATES,
-	FWFSMCONFDB_DCS_FWSETSTATES } is_of_class VOID
+objectset: FWCHILDREN_FWSETACTIONS union {FWCAENCHANNELA2551_FWSETACTIONS } is_of_class VOID
+objectset: FWCHILDREN_FWSETSTATES union {FWCAENCHANNELA2551_FWSETSTATES } is_of_class VOID
 

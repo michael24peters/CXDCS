@@ -133,6 +133,8 @@ class: ASS_FwChildrenMode_CLASS/associated
     state: IncompleteDead
     !color: FwStateAttention3
 
+object: CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM is_of_class ASS_FwChildrenMode_CLASS
+
 object: CODEXB_VANALOG::CODEXB_VANALOG_FWCNM is_of_class ASS_FwChildrenMode_CLASS
 
 object: CODEXB_VDIGITAL::CODEXB_VDIGITAL_FWCNM is_of_class ASS_FwChildrenMode_CLASS
@@ -142,8 +144,6 @@ object: CODEXB_VSENSE::CODEXB_VSENSE_FWCNM is_of_class ASS_FwChildrenMode_CLASS
 object: CODEXB_VTHETA::CODEXB_VTHETA_FWCNM is_of_class ASS_FwChildrenMode_CLASS
 
 object: CODEXB_VTHPHI::CODEXB_VTHPHI_FWCNM is_of_class ASS_FwChildrenMode_CLASS
-
-object: DCT::DCT_FWCNM is_of_class ASS_FwChildrenMode_CLASS
 
 objectset: FWCHILDRENMODE_FWSETSTATES is_of_class VOID
 
@@ -292,6 +292,8 @@ class: ASS_FwMode_CLASS/associated
         action: Free(string OWNER = "")	!visible: 0
         action: ExcludeAll(string OWNER = "")	!visible: 0
 
+object: CODEXB_DCT_LV::CODEXB_DCT_LV_FWM is_of_class ASS_FwMode_CLASS
+
 object: CODEXB_VANALOG::CODEXB_VANALOG_FWM is_of_class ASS_FwMode_CLASS
 
 object: CODEXB_VDIGITAL::CODEXB_VDIGITAL_FWM is_of_class ASS_FwMode_CLASS
@@ -302,7 +304,360 @@ object: CODEXB_VTHETA::CODEXB_VTHETA_FWM is_of_class ASS_FwMode_CLASS
 
 object: CODEXB_VTHPHI::CODEXB_VTHPHI_FWM is_of_class ASS_FwMode_CLASS
 
-object: DCT::DCT_FWM is_of_class ASS_FwMode_CLASS
+class: CODEXB_DCT_LV_FwChildMode_CLASS
+
+!panel: FwChildMode.pnl
+    state: Excluded
+    !color: FwStateOKNotPhysics
+        action: Include(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 1
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state Dead ) then
+              move_to Manual
+            endif
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM not_in_state {Excluded, Manual} ) then
+            !    else
+                    move_to Excluded
+            !    endif
+            else
+                do Include(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETSTATES
+                insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETACTIONS
+                insert CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM in FWCHILDRENMODE_FWSETSTATES
+            endif
+            move_to Included
+        action: Manual	!visible: 0
+            do Manual CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETSTATES
+            remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+            move_to Manual
+        action: Ignore	!visible: 0
+            do Ignore CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETACTIONS
+            remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+            move_to Ignored
+        action: LockOut	!visible: 1
+            move_to LockedOut
+        action: Exclude(string OWNER = "")	!visible: 1
+            do Exclude(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+            remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+            remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+            move_to Excluded
+        action: ExcludePerm(string OWNER = "")	!visible: 0
+            move_to ExcludedPerm
+        action: Exclude&LockOut(string OWNER = "")	!visible: 0
+            move_to LockedOut
+    state: Included
+    !color: FwStateOKPhysics
+        when ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state Excluded )  do Exclude
+        when ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state Ignored )  move_to IGNORED
+        when ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state Manual )  move_to MANUAL
+        when ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state Dead )  do Manual
+        action: Exclude(string OWNER = "")	!visible: 1
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM not_in_state Included ) then
+                if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state InManual ) then
+                    do Release(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+                else
+                        do Exclude(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                        remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                        remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                        remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+            !       else
+            !            move_to Included
+            !        endif
+                endif
+            else
+                do Exclude(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+            endif
+            move_to Excluded
+        action: Manual(string OWNER = "")	!visible: 1
+            do Manual(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETSTATES
+            remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+            move_to Manual
+        action: Ignore(string OWNER = "")	!visible: 1
+            do Ignore(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETACTIONS
+            remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+            move_to Ignored
+        action: ExcludeAll(string OWNER = "")	!visible: 1
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM not_in_state {Included,Ignored,Manual} ) then
+                if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state InManual ) then
+                    do ReleaseAll(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+                else
+                    move_to Included
+                endif
+            else
+                do ExcludeAll(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+            endif
+            move_to Excluded
+        action: Include(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 1
+            do Include(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETSTATES
+            insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETACTIONS
+            insert CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM in FWCHILDRENMODE_FWSETSTATES
+            move_to Included
+        action: Free(string OWNER = "")	!visible: 0
+            do Free(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            move_to Included
+        action: SetMode(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 0
+            do SetMode(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+        action: ExcludePerm(string OWNER = "")	!visible: 0
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM not_in_state Included ) then
+                if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state InManual ) then
+                    do Release(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+                else
+                    move_to Included
+                endif
+            else
+                do Exclude(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+            endif
+            move_to ExcludedPerm
+        action: Exclude&LockOut(string OWNER = "")	!visible: 1
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM not_in_state Included ) then
+                if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state InManual ) then
+                    do Release(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+                else
+                    if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state Dead ) then
+                        do Exclude(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                        remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                        remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                        remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+                   else
+                        move_to Included
+                    endif
+                endif
+            else
+                do Exclude(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+            endif
+            move_to LockedOut
+    state: Manual
+    !color: FwStateOKNotPhysics
+        when ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state Included )  move_to EXCLUDED
+        action: Include(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 1
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state Dead ) then
+              move_to Manual
+            endif
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM not_in_state InManual ) then
+              do Include(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+              insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETSTATES
+              insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETACTIONS
+              insert CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM in FWCHILDRENMODE_FWSETSTATES
+            endif
+              if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state Included ) then
+                move_to Included
+              endif
+            move_to Manual
+        action: Exclude(string OWNER = "")	!visible: 1
+                do Exclude(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+            !    move_to Excluded
+            !endif
+            !    else
+            !    endif
+            !else
+            !endif
+            !    move_to Excluded
+            !endif
+            !move_to Manual
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state InManual ) then
+                 do SetInLocal CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            endif
+            move_to Excluded
+        action: Ignore	!visible: 0
+            do Ignore CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETACTIONS
+            remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+            move_to Ignored
+        action: Free(string OWNER = "")	!visible: 0
+            do Free(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            !move_to Manual
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state InManual ) then
+                 do SetInLocal CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            endif
+            move_to Excluded
+        action: ExcludeAll(string OWNER = "")	!visible: 1
+            !    else
+            !        move_to Included
+            !    endif
+            !else
+            !endif
+              do ExcludeAll(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+              remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+              remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+              remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+            !endif
+            !move_to Manual
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state InManual ) then
+                 do SetInLocal CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            endif
+            move_to Excluded
+        action: Manual	!visible: 0
+            do Manual CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETSTATES
+            remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+            move_to Manual
+        action: Exclude&LockOut(string OWNER = "")	!visible: 1
+                do Exclude(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+            !    move_to Excluded
+            !endif
+            !    else
+            !    endif
+            !else
+            !endif
+            !    move_to Excluded
+            !endif
+            !move_to Manual
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state InManual ) then
+                 do SetInLocal CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            endif
+            move_to LockedOut
+    state: Ignored
+    !color: FwStateOKNotPhysics
+        when ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state Included )  move_to INCLUDED
+        when ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state Excluded ) move_to EXCLUDED
+        when ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state Dead )  do Exclude
+        action: Include(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 1
+            do Include(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETSTATES
+            insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETACTIONS
+            insert CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM in FWCHILDRENMODE_FWSETSTATES
+            move_to Included
+        action: Exclude(string OWNER = "")	!visible: 1
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM not_in_state Included ) then
+                if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state InManual ) then
+                    do Release(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+                else
+                    do Exclude(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+                endif
+            else
+                do Exclude(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+            endif
+            move_to Excluded
+        action: Manual(string OWNER = "")	!visible: 0
+            do Manual(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETSTATES
+            remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+            move_to Manual
+        action: SetMode(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 0
+            do SetMode(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+        action: Free(string OWNER = "")	!visible: 0
+            do Free(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+            move_to Included
+        action: ExcludeAll(string OWNER = "")	!visible: 1
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM not_in_state {Included,Ignored,Manual} ) then
+                if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM in_state InManual ) then
+                    do ReleaseAll(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                    remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+                else
+                    move_to Included
+                endif
+            else
+                do ExcludeAll(OWNER=OWNER) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETSTATES
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV from DCS_DOMAIN_V1_FWSETACTIONS
+                remove CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM from FWCHILDRENMODE_FWSETSTATES
+            endif
+            move_to Excluded
+    state: LockedOut
+    !color: FwStateOKNotPhysics
+        action: UnLockOut	!visible: 1
+            move_to Excluded
+        action: UnLockOut&Include(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 1
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM not_in_state Excluded ) then
+            !    else
+                    move_to LockedOut
+            !    endif
+            else
+                do Include(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETSTATES
+                insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETACTIONS
+                insert CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM in FWCHILDRENMODE_FWSETSTATES
+            endif
+            move_to Included
+        action: LockOutPerm	!visible: 0
+            move_to LockedOutPerm
+    state: ExcludedPerm
+    !color: FwStateOKNotPhysics
+        action: Include(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 1
+            !    else
+            !        move_to Excluded
+            !    endif
+            !else
+            !endif
+            !move_to Included
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM not_in_state {Excluded, Manual} ) then
+                move_to ExcludedPerm
+            else
+                do Include(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETSTATES
+                insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETACTIONS
+                insert CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM in FWCHILDRENMODE_FWSETSTATES
+            endif
+            move_to Included
+        action: LockOut	!visible: 1
+            move_to LockedOut
+        action: Exclude(string OWNER = "")	!visible: 0
+            move_to Excluded
+    state: LockedOutPerm
+    !color: FwStateOKNotPhysics
+        action: UnLockOut	!visible: 1
+            move_to Excluded
+        action: UnLockOut&Include(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 1
+            if ( CODEXB_DCT_LV::CODEXB_DCT_LV_FWM not_in_state Excluded ) then
+            !    else
+                    move_to LockedOutPerm
+            !    endif
+            else
+                do Include(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) CODEXB_DCT_LV::CODEXB_DCT_LV_FWM
+                insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETSTATES
+                insert CODEXB_DCT_LV::CODEXB_DCT_LV in DCS_DOMAIN_V1_FWSETACTIONS
+                insert CODEXB_DCT_LV::CODEXB_DCT_LV_FWCNM in FWCHILDRENMODE_FWSETSTATES
+            endif
+            move_to Included
+        action: LockOut	!visible: 0
+            move_to LockedOut
+
+object: CODEXB_DCT_LV_FWM is_of_class CODEXB_DCT_LV_FwChildMode_CLASS
 
 class: CODEXB_VANALOG_FwChildMode_CLASS
 
@@ -2079,373 +2434,18 @@ class: CODEXB_VTHPHI_FwChildMode_CLASS
 
 object: CODEXB_VTHPHI_FWM is_of_class CODEXB_VTHPHI_FwChildMode_CLASS
 
-class: DCT_FwChildMode_CLASS
-
-!panel: FwChildMode.pnl
-    state: Excluded
-    !color: FwStateOKNotPhysics
-        action: Include(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 1
-            if ( DCT::DCT_FWM in_state Dead ) then
-              move_to Manual
-            endif
-            if ( DCT::DCT_FWM not_in_state {Excluded, Manual} ) then
-            !    else
-                    move_to Excluded
-            !    endif
-            else
-                do Include(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) DCT::DCT_FWM
-                insert DCT::DCT in DCS_DOMAIN_V1_FWSETSTATES
-                insert DCT::DCT in DCS_DOMAIN_V1_FWSETACTIONS
-                insert DCT::DCT_FWCNM in FWCHILDRENMODE_FWSETSTATES
-            endif
-            move_to Included
-        action: Manual	!visible: 0
-            do Manual DCT::DCT_FWM
-            insert DCT::DCT in DCS_DOMAIN_V1_FWSETSTATES
-            remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-            move_to Manual
-        action: Ignore	!visible: 0
-            do Ignore DCT::DCT_FWM
-            insert DCT::DCT in DCS_DOMAIN_V1_FWSETACTIONS
-            remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-            move_to Ignored
-        action: LockOut	!visible: 1
-            move_to LockedOut
-        action: Exclude(string OWNER = "")	!visible: 1
-            do Exclude(OWNER=OWNER) DCT::DCT_FWM
-            remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-            remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-            remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-            move_to Excluded
-        action: ExcludePerm(string OWNER = "")	!visible: 0
-            move_to ExcludedPerm
-        action: Exclude&LockOut(string OWNER = "")	!visible: 0
-            move_to LockedOut
-    state: Included
-    !color: FwStateOKPhysics
-        when ( DCT::DCT_FWM in_state Excluded )  do Exclude
-        when ( DCT::DCT_FWM in_state Ignored )  move_to IGNORED
-        when ( DCT::DCT_FWM in_state Manual )  move_to MANUAL
-        when ( DCT::DCT_FWM in_state Dead )  do Manual
-        action: Exclude(string OWNER = "")	!visible: 1
-            if ( DCT::DCT_FWM not_in_state Included ) then
-                if ( DCT::DCT_FWM in_state InManual ) then
-                    do Release(OWNER=OWNER) DCT::DCT_FWM
-                    remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                    remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                    remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-                else
-                        do Exclude(OWNER=OWNER) DCT::DCT_FWM
-                        remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                        remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                        remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-            !       else
-            !            move_to Included
-            !        endif
-                endif
-            else
-                do Exclude(OWNER=OWNER) DCT::DCT_FWM
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-            endif
-            move_to Excluded
-        action: Manual(string OWNER = "")	!visible: 1
-            do Manual(OWNER=OWNER) DCT::DCT_FWM
-            insert DCT::DCT in DCS_DOMAIN_V1_FWSETSTATES
-            remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-            move_to Manual
-        action: Ignore(string OWNER = "")	!visible: 1
-            do Ignore(OWNER=OWNER) DCT::DCT_FWM
-            insert DCT::DCT in DCS_DOMAIN_V1_FWSETACTIONS
-            remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-            move_to Ignored
-        action: ExcludeAll(string OWNER = "")	!visible: 1
-            if ( DCT::DCT_FWM not_in_state {Included,Ignored,Manual} ) then
-                if ( DCT::DCT_FWM in_state InManual ) then
-                    do ReleaseAll(OWNER=OWNER) DCT::DCT_FWM
-                    remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                    remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                    remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-                else
-                    move_to Included
-                endif
-            else
-                do ExcludeAll(OWNER=OWNER) DCT::DCT_FWM
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-            endif
-            move_to Excluded
-        action: Include(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 1
-            do Include(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) DCT::DCT_FWM
-            insert DCT::DCT in DCS_DOMAIN_V1_FWSETSTATES
-            insert DCT::DCT in DCS_DOMAIN_V1_FWSETACTIONS
-            insert DCT::DCT_FWCNM in FWCHILDRENMODE_FWSETSTATES
-            move_to Included
-        action: Free(string OWNER = "")	!visible: 0
-            do Free(OWNER=OWNER) DCT::DCT_FWM
-            move_to Included
-        action: SetMode(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 0
-            do SetMode(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) DCT::DCT_FWM
-        action: ExcludePerm(string OWNER = "")	!visible: 0
-            if ( DCT::DCT_FWM not_in_state Included ) then
-                if ( DCT::DCT_FWM in_state InManual ) then
-                    do Release(OWNER=OWNER) DCT::DCT_FWM
-                    remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                    remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                    remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-                else
-                    move_to Included
-                endif
-            else
-                do Exclude(OWNER=OWNER) DCT::DCT_FWM
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-            endif
-            move_to ExcludedPerm
-        action: Exclude&LockOut(string OWNER = "")	!visible: 1
-            if ( DCT::DCT_FWM not_in_state Included ) then
-                if ( DCT::DCT_FWM in_state InManual ) then
-                    do Release(OWNER=OWNER) DCT::DCT_FWM
-                    remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                    remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                    remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-                else
-                    if ( DCT::DCT_FWM in_state Dead ) then
-                        do Exclude(OWNER=OWNER) DCT::DCT_FWM
-                        remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                        remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                        remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-                   else
-                        move_to Included
-                    endif
-                endif
-            else
-                do Exclude(OWNER=OWNER) DCT::DCT_FWM
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-            endif
-            move_to LockedOut
-    state: Manual
-    !color: FwStateOKNotPhysics
-        when ( DCT::DCT_FWM in_state Included )  move_to EXCLUDED
-        action: Include(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 1
-            if ( DCT::DCT_FWM in_state Dead ) then
-              move_to Manual
-            endif
-            if ( DCT::DCT_FWM not_in_state InManual ) then
-              do Include(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) DCT::DCT_FWM
-              insert DCT::DCT in DCS_DOMAIN_V1_FWSETSTATES
-              insert DCT::DCT in DCS_DOMAIN_V1_FWSETACTIONS
-              insert DCT::DCT_FWCNM in FWCHILDRENMODE_FWSETSTATES
-            endif
-              if ( DCT::DCT_FWM in_state Included ) then
-                move_to Included
-              endif
-            move_to Manual
-        action: Exclude(string OWNER = "")	!visible: 1
-                do Exclude(OWNER=OWNER) DCT::DCT_FWM
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-            !    move_to Excluded
-            !endif
-            !    else
-            !    endif
-            !else
-            !endif
-            !    move_to Excluded
-            !endif
-            !move_to Manual
-            if ( DCT::DCT_FWM in_state InManual ) then
-                 do SetInLocal DCT::DCT_FWM
-            endif
-            move_to Excluded
-        action: Ignore	!visible: 0
-            do Ignore DCT::DCT_FWM
-            insert DCT::DCT in DCS_DOMAIN_V1_FWSETACTIONS
-            remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-            move_to Ignored
-        action: Free(string OWNER = "")	!visible: 0
-            do Free(OWNER=OWNER) DCT::DCT_FWM
-            !move_to Manual
-            if ( DCT::DCT_FWM in_state InManual ) then
-                 do SetInLocal DCT::DCT_FWM
-            endif
-            move_to Excluded
-        action: ExcludeAll(string OWNER = "")	!visible: 1
-            !    else
-            !        move_to Included
-            !    endif
-            !else
-            !endif
-              do ExcludeAll(OWNER=OWNER) DCT::DCT_FWM
-              remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-              remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-              remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-            !endif
-            !move_to Manual
-            if ( DCT::DCT_FWM in_state InManual ) then
-                 do SetInLocal DCT::DCT_FWM
-            endif
-            move_to Excluded
-        action: Manual	!visible: 0
-            do Manual DCT::DCT_FWM
-            insert DCT::DCT in DCS_DOMAIN_V1_FWSETSTATES
-            remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-            move_to Manual
-        action: Exclude&LockOut(string OWNER = "")	!visible: 1
-                do Exclude(OWNER=OWNER) DCT::DCT_FWM
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-            !    move_to Excluded
-            !endif
-            !    else
-            !    endif
-            !else
-            !endif
-            !    move_to Excluded
-            !endif
-            !move_to Manual
-            if ( DCT::DCT_FWM in_state InManual ) then
-                 do SetInLocal DCT::DCT_FWM
-            endif
-            move_to LockedOut
-    state: Ignored
-    !color: FwStateOKNotPhysics
-        when ( DCT::DCT_FWM in_state Included )  move_to INCLUDED
-        when ( DCT::DCT_FWM in_state Excluded ) move_to EXCLUDED
-        when ( DCT::DCT_FWM in_state Dead )  do Exclude
-        action: Include(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 1
-            do Include(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) DCT::DCT_FWM
-            insert DCT::DCT in DCS_DOMAIN_V1_FWSETSTATES
-            insert DCT::DCT in DCS_DOMAIN_V1_FWSETACTIONS
-            insert DCT::DCT_FWCNM in FWCHILDRENMODE_FWSETSTATES
-            move_to Included
-        action: Exclude(string OWNER = "")	!visible: 1
-            if ( DCT::DCT_FWM not_in_state Included ) then
-                if ( DCT::DCT_FWM in_state InManual ) then
-                    do Release(OWNER=OWNER) DCT::DCT_FWM
-                    remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                    remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                    remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-                else
-                    do Exclude(OWNER=OWNER) DCT::DCT_FWM
-                    remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                    remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                    remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-                endif
-            else
-                do Exclude(OWNER=OWNER) DCT::DCT_FWM
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-            endif
-            move_to Excluded
-        action: Manual(string OWNER = "")	!visible: 0
-            do Manual(OWNER=OWNER) DCT::DCT_FWM
-            insert DCT::DCT in DCS_DOMAIN_V1_FWSETSTATES
-            remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-            move_to Manual
-        action: SetMode(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 0
-            do SetMode(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) DCT::DCT_FWM
-        action: Free(string OWNER = "")	!visible: 0
-            do Free(OWNER=OWNER) DCT::DCT_FWM
-            move_to Included
-        action: ExcludeAll(string OWNER = "")	!visible: 1
-            if ( DCT::DCT_FWM not_in_state {Included,Ignored,Manual} ) then
-                if ( DCT::DCT_FWM in_state InManual ) then
-                    do ReleaseAll(OWNER=OWNER) DCT::DCT_FWM
-                    remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                    remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                    remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-                else
-                    move_to Included
-                endif
-            else
-                do ExcludeAll(OWNER=OWNER) DCT::DCT_FWM
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETSTATES
-                remove DCT::DCT from DCS_DOMAIN_V1_FWSETACTIONS
-                remove DCT::DCT_FWCNM from FWCHILDRENMODE_FWSETSTATES
-            endif
-            move_to Excluded
-    state: LockedOut
-    !color: FwStateOKNotPhysics
-        action: UnLockOut	!visible: 1
-            move_to Excluded
-        action: UnLockOut&Include(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 1
-            if ( DCT::DCT_FWM not_in_state Excluded ) then
-            !    else
-                    move_to LockedOut
-            !    endif
-            else
-                do Include(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) DCT::DCT_FWM
-                insert DCT::DCT in DCS_DOMAIN_V1_FWSETSTATES
-                insert DCT::DCT in DCS_DOMAIN_V1_FWSETACTIONS
-                insert DCT::DCT_FWCNM in FWCHILDRENMODE_FWSETSTATES
-            endif
-            move_to Included
-        action: LockOutPerm	!visible: 0
-            move_to LockedOutPerm
-    state: ExcludedPerm
-    !color: FwStateOKNotPhysics
-        action: Include(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 1
-            !    else
-            !        move_to Excluded
-            !    endif
-            !else
-            !endif
-            !move_to Included
-            if ( DCT::DCT_FWM not_in_state {Excluded, Manual} ) then
-                move_to ExcludedPerm
-            else
-                do Include(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) DCT::DCT_FWM
-                insert DCT::DCT in DCS_DOMAIN_V1_FWSETSTATES
-                insert DCT::DCT in DCS_DOMAIN_V1_FWSETACTIONS
-                insert DCT::DCT_FWCNM in FWCHILDRENMODE_FWSETSTATES
-            endif
-            move_to Included
-        action: LockOut	!visible: 1
-            move_to LockedOut
-        action: Exclude(string OWNER = "")	!visible: 0
-            move_to Excluded
-    state: LockedOutPerm
-    !color: FwStateOKNotPhysics
-        action: UnLockOut	!visible: 1
-            move_to Excluded
-        action: UnLockOut&Include(string OWNER = "", string EXCLUSIVE = "YES")	!visible: 1
-            if ( DCT::DCT_FWM not_in_state Excluded ) then
-            !    else
-                    move_to LockedOutPerm
-            !    endif
-            else
-                do Include(OWNER=OWNER,EXCLUSIVE=EXCLUSIVE) DCT::DCT_FWM
-                insert DCT::DCT in DCS_DOMAIN_V1_FWSETSTATES
-                insert DCT::DCT in DCS_DOMAIN_V1_FWSETACTIONS
-                insert DCT::DCT_FWCNM in FWCHILDRENMODE_FWSETSTATES
-            endif
-            move_to Included
-        action: LockOut	!visible: 0
-            move_to LockedOut
-
-object: DCT_FWM is_of_class DCT_FwChildMode_CLASS
-
-objectset: FWCHILDMODE_FWSETSTATES is_of_class VOID {CODEXB_VANALOG_FWM,
+objectset: FWCHILDMODE_FWSETSTATES is_of_class VOID {CODEXB_DCT_LV_FWM,
+	CODEXB_VANALOG_FWM,
 	CODEXB_VDIGITAL_FWM,
 	CODEXB_VSENSE_FWM,
 	CODEXB_VTHETA_FWM,
-	CODEXB_VTHPHI_FWM,
-	DCT_FWM }
-objectset: FWCHILDMODE_FWSETACTIONS is_of_class VOID {CODEXB_VANALOG_FWM,
+	CODEXB_VTHPHI_FWM }
+objectset: FWCHILDMODE_FWSETACTIONS is_of_class VOID {CODEXB_DCT_LV_FWM,
+	CODEXB_VANALOG_FWM,
 	CODEXB_VDIGITAL_FWM,
 	CODEXB_VSENSE_FWM,
 	CODEXB_VTHETA_FWM,
-	CODEXB_VTHPHI_FWM,
-	DCT_FWM }
+	CODEXB_VTHPHI_FWM }
 
 class: ASS_DCS_Domain_v1_CLASS/associated
 !panel: DCS_Domain_v1.pnl
@@ -2474,6 +2474,8 @@ class: ASS_DCS_Domain_v1_CLASS/associated
     !color: FwStateAttention3
         action: Clear_Emergency	!visible: 2
 
+object: CODEXB_DCT_LV::CODEXB_DCT_LV is_of_class ASS_DCS_Domain_v1_CLASS
+
 object: CODEXB_VANALOG::CODEXB_VANALOG is_of_class ASS_DCS_Domain_v1_CLASS
 
 object: CODEXB_VDIGITAL::CODEXB_VDIGITAL is_of_class ASS_DCS_Domain_v1_CLASS
@@ -2483,8 +2485,6 @@ object: CODEXB_VSENSE::CODEXB_VSENSE is_of_class ASS_DCS_Domain_v1_CLASS
 object: CODEXB_VTHETA::CODEXB_VTHETA is_of_class ASS_DCS_Domain_v1_CLASS
 
 object: CODEXB_VTHPHI::CODEXB_VTHPHI is_of_class ASS_DCS_Domain_v1_CLASS
-
-object: DCT::DCT is_of_class ASS_DCS_Domain_v1_CLASS
 
 objectset: DCS_DOMAIN_V1_FWSETSTATES is_of_class VOID
 objectset: DCS_DOMAIN_V1_FWSETACTIONS is_of_class VOID

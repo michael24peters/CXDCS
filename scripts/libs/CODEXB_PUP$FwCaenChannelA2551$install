@@ -1,0 +1,62 @@
+#uses "FwCaenChannelA2551.ctl"
+CODEXB_PUP_CAEN_cxcaen01_board10_channel000_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board10/channel000");
+   if(!globalExists("FwCaenChannelA2551_CurrDUActions"))
+   {
+      addGlobal("FwCaenChannelA2551_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwCaenChannelA2551",FwCaenChannelA2551_CurrDUActions);
+   }
+   FwCaenChannelA2551_initialize("CODEXB_PUP", devdp);
+   fwDU_setDefaultParameters("CODEXB_PUP", devdp);
+   if(dpConnect("cbCODEXB_PUP_CAEN_cxcaen01_board10_channel000_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbCODEXB_PUP_CAEN_cxcaen01_board10_channel000_doCommand",false,
+     "CODEXB_PUP|CAEN/cxcaen01/board10/channel000.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+CODEXB_PUP_CAEN_cxcaen01_board10_channel000_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling CODEXB_PUP CAEN/cxcaen01/board10/channel000");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board10/channel000");
+   if(dpDisconnect("cbCODEXB_PUP_CAEN_cxcaen01_board10_channel000_valueChanged",
+      devdp+".actual.status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbCODEXB_PUP_CAEN_cxcaen01_board10_channel000_doCommand",
+     "CODEXB_PUP|CAEN/cxcaen01/board10/channel000.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbCODEXB_PUP_CAEN_cxcaen01_board10_channel000_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board10/channel000");
+   fwDU_convertValue("CODEXB_PUP","CAEN/cxcaen01/board10/channel000");
+   FwCaenChannelA2551_valueChanged("CODEXB_PUP", devdp,
+      x1, state );
+   fwDU_setState("CODEXB_PUP", devdp, state);
+}
+
+cbCODEXB_PUP_CAEN_cxcaen01_board10_channel000_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CAEN/cxcaen01/board10/channel000");
+   command = fwDU_convertCommand("CODEXB_PUP","CAEN/cxcaen01/board10/channel000","FwCaenChannelA2551", FwCaenChannelA2551_CurrDUActions, command);
+   FwCaenChannelA2551_doCommand("CODEXB_PUP", devdp, command);
+}
+

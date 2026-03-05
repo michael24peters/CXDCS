@@ -1,0 +1,62 @@
+#uses "FwFSMConfDB_DCS.ctl"
+CODEXB_PUP_CODEXB_PUP_ConfDB_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CODEXB_PUP_ConfDB");
+   if(!globalExists("FwFSMConfDB_DCS_CurrDUActions"))
+   {
+      addGlobal("FwFSMConfDB_DCS_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwFSMConfDB_DCS",FwFSMConfDB_DCS_CurrDUActions);
+   }
+   FwFSMConfDB_DCS_initialize("CODEXB_PUP", devdp);
+   fwDU_setDefaultParameters("CODEXB_PUP", devdp);
+   if(dpConnect("cbCODEXB_PUP_CODEXB_PUP_ConfDB_valueChanged",
+      devdp+".status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+   if(dpConnect("cbCODEXB_PUP_CODEXB_PUP_ConfDB_doCommand",false,
+     "CODEXB_PUP|CODEXB_PUP_ConfDB.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect command");
+}
+
+CODEXB_PUP_CODEXB_PUP_ConfDB_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling CODEXB_PUP CODEXB_PUP_ConfDB");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("CODEXB_PUP_ConfDB");
+   if(dpDisconnect("cbCODEXB_PUP_CODEXB_PUP_ConfDB_valueChanged",
+      devdp+".status:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+   if(dpDisconnect("cbCODEXB_PUP_CODEXB_PUP_ConfDB_doCommand",
+     "CODEXB_PUP|CODEXB_PUP_ConfDB.fsm.sendCommand:_online.._value"
+     ) == -1 )
+      DebugN("Bad dpDisconnect command");
+}
+
+cbCODEXB_PUP_CODEXB_PUP_ConfDB_valueChanged(
+      string dp1, int x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CODEXB_PUP_ConfDB");
+   fwDU_convertValue("CODEXB_PUP","CODEXB_PUP_ConfDB");
+   FwFSMConfDB_DCS_valueChanged("CODEXB_PUP", devdp,
+      x1, state );
+   fwDU_setState("CODEXB_PUP", devdp, state);
+}
+
+cbCODEXB_PUP_CODEXB_PUP_ConfDB_doCommand(string dp, string command)
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("CODEXB_PUP_ConfDB");
+   command = fwDU_convertCommand("CODEXB_PUP","CODEXB_PUP_ConfDB","FwFSMConfDB_DCS", FwFSMConfDB_DCS_CurrDUActions, command);
+   FwFSMConfDB_DCS_doCommand("CODEXB_PUP", devdp, command);
+}
+

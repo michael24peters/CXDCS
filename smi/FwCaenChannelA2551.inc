@@ -1,0 +1,21 @@
+class: ASS_FwCaenChannelA2551_CLASS/associated
+!panel: FwCaenChannelA2551.pnl
+    parameters: string EXTERNALY = "UNKNOWN"
+    state: READY
+    !color: FwStateOKPhysics
+        action: Switch_OFF	!visible: 1
+        action: Do_Emergency_OFF	!visible: 0
+    state: OFF
+    !color: FwStateOKNotPhysics
+        action: Switch_ON(string RUN_TYPE = "PHYSICS")	!visible: 1
+        action: Do_Emergency_OFF	!visible: 0
+    state: ERROR
+    !color: FwStateAttention3
+        action: Recover	!visible: 1
+    state: EMERGENCY_OFF
+    !color: FwStateAttention3
+        action: Clear_Emergency	!visible: 1
+    state: NOT_READY
+    !color: FwStateAttention1
+        action: Do_Emergency_OFF	!visible: 0
+        action: Switch_OFF	!visible: 1

@@ -1,0 +1,45 @@
+#uses "FwDevMode.ctl"
+PHI_THRESHOLD_PHI_THRESHOLD_FWDM_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("PHI_THRESHOLD_FWDM");
+   if(!globalExists("FwDevMode_CurrDUActions"))
+   {
+      addGlobal("FwDevMode_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwDevMode",FwDevMode_CurrDUActions);
+   }
+   FwDevMode_initialize("PHI_THRESHOLD", devdp);
+   fwDU_setDefaultParameters("PHI_THRESHOLD", devdp);
+   if(dpConnect("cbPHI_THRESHOLD_PHI_THRESHOLD_FWDM_valueChanged",
+      devdp+".disabled:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+}
+
+PHI_THRESHOLD_PHI_THRESHOLD_FWDM_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling PHI_THRESHOLD PHI_THRESHOLD_FWDM");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("PHI_THRESHOLD_FWDM");
+   if(dpDisconnect("cbPHI_THRESHOLD_PHI_THRESHOLD_FWDM_valueChanged",
+      devdp+".disabled:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+}
+
+cbPHI_THRESHOLD_PHI_THRESHOLD_FWDM_valueChanged(
+      string dp1, dyn_string x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("PHI_THRESHOLD_FWDM");
+   fwDU_convertValue("PHI_THRESHOLD","PHI_THRESHOLD_FWDM");
+   FwDevMode_valueChanged("PHI_THRESHOLD", devdp,
+      x1, state );
+   fwDU_setState("PHI_THRESHOLD", devdp, state);
+}
+

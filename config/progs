@@ -18,3 +18,4 @@ WCCILsim         | manual |      30 |        2 |        2 |-num 6
 WCCOActrl        | always |      30 |        3 |        2 |unDistributedControl.ctl
 WCCOActrl        | always |      30 |        3 |        5 |fwFSM/fwFsmSrvr.ctl
 WCCOAui          | manual |       5 |        3 |        5 |-p fwDeviceEditorNavigator/fwDeviceEditorNavigator.pnl -iconBar -menuBar
+WCCOAui          | manual |      30 |        2 |        2 |-p lbLV/lbLV_ConfDBInitializer.pnl -iconBar -menuBar

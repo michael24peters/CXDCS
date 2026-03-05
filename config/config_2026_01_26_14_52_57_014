@@ -11,11 +11,6 @@ distributed = 1
 userName = "root"
 password = ""
 mxProxy = "none"
-pmonPort = 14110
-dataPort = 14111
-eventPort = 14112
-[dist]
-distPort = 14117
 [ui]
 #--------- begin fwAccessControl      - Do not edit it manually
 LoadCtrlLibs = "fwAccessControl/fwAccessControl.ctc"

@@ -1,0 +1,45 @@
+#uses "FwDevMode.ctl"
+DCT_DCT_FWDM_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("DCT_FWDM");
+   if(!globalExists("FwDevMode_CurrDUActions"))
+   {
+      addGlobal("FwDevMode_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwDevMode",FwDevMode_CurrDUActions);
+   }
+   FwDevMode_initialize("DCT", devdp);
+   fwDU_setDefaultParameters("DCT", devdp);
+   if(dpConnect("cbDCT_DCT_FWDM_valueChanged",
+      devdp+".disabled:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+}
+
+DCT_DCT_FWDM_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling DCT DCT_FWDM");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("DCT_FWDM");
+   if(dpDisconnect("cbDCT_DCT_FWDM_valueChanged",
+      devdp+".disabled:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+}
+
+cbDCT_DCT_FWDM_valueChanged(
+      string dp1, dyn_string x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("DCT_FWDM");
+   fwDU_convertValue("DCT","DCT_FWDM");
+   FwDevMode_valueChanged("DCT", devdp,
+      x1, state );
+   fwDU_setState("DCT", devdp, state);
+}
+

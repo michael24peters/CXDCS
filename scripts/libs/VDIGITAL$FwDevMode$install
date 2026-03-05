@@ -1,0 +1,45 @@
+#uses "FwDevMode.ctl"
+VDIGITAL_VDIGITAL_FWDM_install()
+{
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("VDIGITAL_FWDM");
+   if(!globalExists("FwDevMode_CurrDUActions"))
+   {
+      addGlobal("FwDevMode_CurrDUActions",DYN_STRING_VAR);
+      fwDU_getAllActions("FwDevMode",FwDevMode_CurrDUActions);
+   }
+   FwDevMode_initialize("VDIGITAL", devdp);
+   fwDU_setDefaultParameters("VDIGITAL", devdp);
+   if(dpConnect("cbVDIGITAL_VDIGITAL_FWDM_valueChanged",
+      devdp+".disabled:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpConnect state");
+}
+
+VDIGITAL_VDIGITAL_FWDM_uninstall(string dp, int running)
+{
+   string devdp;
+
+DebugTN("uninstalling VDIGITAL VDIGITAL_FWDM");
+   if(running) return;
+   devdp = ""+fwDU_getPhysicalName("VDIGITAL_FWDM");
+   if(dpDisconnect("cbVDIGITAL_VDIGITAL_FWDM_valueChanged",
+      devdp+".disabled:_online.._value"
+     ) == -1 )
+      DebugTN("Bad dpDisconnect state");
+}
+
+cbVDIGITAL_VDIGITAL_FWDM_valueChanged(
+      string dp1, dyn_string x1   )
+{
+   string state;
+   string devdp;
+
+   devdp = ""+fwDU_getPhysicalName("VDIGITAL_FWDM");
+   fwDU_convertValue("VDIGITAL","VDIGITAL_FWDM");
+   FwDevMode_valueChanged("VDIGITAL", devdp,
+      x1, state );
+   fwDU_setState("VDIGITAL", devdp, state);
+}
+

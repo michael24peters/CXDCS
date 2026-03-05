@@ -11,24 +11,7 @@ distributed = 1
 userName = "root"
 password = ""
 mxProxy = "none"
-pmonPort = 14110
-dataPort = 14111
-eventPort = 14112
-[dist]
-distPort = 14117
 [ui]
-#--------- begin fwAccessControl      - Do not edit it manually
-LoadCtrlLibs = "fwAccessControl/fwAccessControl.ctc"
-#----------- end fwAccessControl      -------------------------
-#--------- begin fwTrending3          - Do not edit it manually
-scriptEditorParseLibs = "classes/fwTrending/FwTrending_*.ctl"
-#----------- end fwTrending3          -------------------------
-#--------- begin fwConfigurationDB    - Do not edit it manually
-# To enforce synchronous (blocking) mode of CtrlRDBAccess operations
-# enable the fwConfigurationDB_ForceSynchronousMode = 1 in the [ui] or [ctrl]
-# block; [ui_X] and [ctrl_X] will also be checked:
-#fwConfigurationDB_ForceSynchronousMode = 1
-#----------- end fwConfigurationDB    -------------------------
 #--------- begin fwCore               - Do not edit it manually
 LoadCtrlLibs = "AAA_FwLibStartup_UI.ctl"
 #----------- end fwCore               -------------------------
@@ -65,6 +48,12 @@ scriptEditorParseLibs = "fwStdLib/fw*.ctl"
 #--------- begin lbFsmDomains         - Do not edit it manually
 LoadCtrlLibs = "lbFSMConfDB/lbFSMConfDB.ctl"
 #----------- end lbFsmDomains         -------------------------
+#--------- begin fwAccessControl      - Do not edit it manually
+LoadCtrlLibs = "fwAccessControl/fwAccessControl.ctc"
+#----------- end fwAccessControl      -------------------------
+#--------- begin fwTrending3          - Do not edit it manually
+scriptEditorParseLibs = "classes/fwTrending/FwTrending_*.ctl"
+#----------- end fwTrending3          -------------------------
 defaultFont = "Noto Sans"
 activeIconTheme = ""
 LoadCtrlLibs = "fwInstallation/fwInstallation.ctl"

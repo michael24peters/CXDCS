@@ -1,0 +1,576 @@
+
+=== SEVERE WARNING ============================================================
+ line 189:  object: CAEN:cxcaen01:board10:channel000 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 191:  object: CAEN:cxcaen01:board10:channel001 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 193:  object: CAEN:cxcaen01:board10:channel002 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 195:  object: CAEN:cxcaen01:board10:channel003 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 197:  object: CAEN:cxcaen01:board10:channel004 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 199:  object: CAEN:cxcaen01:board10:channel005 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 201:  object: CAEN:cxcaen01:board10:channel006 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 203:  object: CAEN:cxcaen01:board10:channel007 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 205:  object: CAEN:cxcaen01:board11:channel000 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 207:  object: CAEN:cxcaen01:board11:channel001 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 209:  object: CAEN:cxcaen01:board11:channel002 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 211:  object: CAEN:cxcaen01:board11:channel003 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 213:  object: CAEN:cxcaen01:board11:channel004 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 215:  object: CAEN:cxcaen01:board11:channel005 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 217:  object: CAEN:cxcaen01:board11:channel006 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 219:  object: CAEN:cxcaen01:board11:channel007 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 221:  object: CAEN:cxcaen01:board12:channel000 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 223:  object: CAEN:cxcaen01:board12:channel001 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 225:  object: CAEN:cxcaen01:board12:channel002 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 227:  object: CAEN:cxcaen01:board12:channel003 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 229:  object: CAEN:cxcaen01:board12:channel004 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 231:  object: CAEN:cxcaen01:board12:channel005 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 233:  object: CAEN:cxcaen01:board12:channel006 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 235:  object: CAEN:cxcaen01:board12:channel007 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 237:  object: CAEN:cxcaen01:board13:channel000 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 239:  object: CAEN:cxcaen01:board13:channel001 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 241:  object: CAEN:cxcaen01:board13:channel002 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 243:  object: CAEN:cxcaen01:board13:channel003 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 245:  object: CAEN:cxcaen01:board13:channel004 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 247:  object: CAEN:cxcaen01:board13:channel005 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 249:  object: CAEN:cxcaen01:board13:channel006 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 251:  object: CAEN:cxcaen01:board13:channel007 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 253:  object: CAEN:cxcaen01:board14:channel000 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 255:  object: CAEN:cxcaen01:board14:channel001 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 257:  object: CAEN:cxcaen01:board14:channel002 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 259:  object: CAEN:cxcaen01:board14:channel003 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 261:  object: CAEN:cxcaen01:board14:channel004 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 263:  object: CAEN:cxcaen01:board14:channel005 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 265:  object: CAEN:cxcaen01:board14:channel006 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 267:  object: CAEN:cxcaen01:board14:channel007 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 269:  object: CAEN:cxcaen01:board15:channel000 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 271:  object: CAEN:cxcaen01:board15:channel001 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 273:  object: CAEN:cxcaen01:board15:channel002 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 275:  object: CAEN:cxcaen01:board15:channel003 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 277:  object: CAEN:cxcaen01:board15:channel004 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 279:  object: CAEN:cxcaen01:board15:channel005 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 281:  object: CAEN:cxcaen01:board15:channel006 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 283:  object: CAEN:cxcaen01:board15:channel007 is_of_class FwCaenChannelA2551_CLASS
+  class FWCAENCHANNELA2551_CLASS is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL000 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL001 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL002 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL003 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL004 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL005 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL006 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL007 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL000 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL001 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL002 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL003 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL004 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL005 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL006 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL007 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL000 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL001 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL002 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL003 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL004 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL005 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL006 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL007 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL000 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL001 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL002 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL003 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL004 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL005 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL006 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL007 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL000 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL001 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL002 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL003 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL004 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL005 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL006 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL007 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL000 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL001 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL002 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL003 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL004 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL005 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL006 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 285:  objectset: FWCAENCHANNELA2551_FWSETSTATES is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL007 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL000 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL001 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL002 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL003 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL004 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL005 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL006 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD10:CHANNEL007 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL000 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL001 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL002 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL003 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL004 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL005 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL006 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD11:CHANNEL007 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL000 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL001 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL002 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL003 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL004 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL005 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL006 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD12:CHANNEL007 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL000 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL001 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL002 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL003 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL004 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL005 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL006 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD13:CHANNEL007 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL000 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL001 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL002 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL003 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL004 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL005 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL006 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD14:CHANNEL007 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL000 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL001 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL002 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL003 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL004 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL005 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL006 is not declared 
+
+=== SEVERE WARNING ============================================================
+ line 333:  objectset: FWCAENCHANNELA2551_FWSETACTIONS is_of_class VOID {CAEN:cxcaen01:board10:channel000,
+ Object CAEN:CXCAEN01:BOARD15:CHANNEL007 is not declared 
